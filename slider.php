@@ -30,7 +30,7 @@
 		$usecustomslides		= $options['ne_slider_type'];
 		
 		if ($usecustomslides == 'custom')
-    	query_posts( array ('post_type' => 'if_custom_slides', 'showposts' => 20 ) );
+    	query_posts( array ('post_type' => 'ne_custom_slides', 'showposts' => 20 ) );
     	
     	else
     	query_posts('category_name='.$options['ne_slider_category'].'&showposts=50');
