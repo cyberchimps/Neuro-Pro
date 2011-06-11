@@ -351,4 +351,5 @@ add_action( 'wp_head', 'neuro_add_scripts',0);
 	
 require_once ( get_template_directory() . '/library/options/options.php' );
 require_once ( get_template_directory() . '/pro/meta-box.php' );
+require_once ( get_template_directory() . '/inc/update.php' );
 ?>
