@@ -1454,49 +1454,6 @@ function theme_options_validate( $input ) {
 ?>
 <?php
 
-
-/* Truncate */
-
-function truncate ($str, $length=10, $trailing='..')
-{
- $length-=mb_strlen($trailing);
- if (mb_strlen($str)> $length)
-	  {
- return mb_substr($str,0,$length).$trailing;
-  }
- else
-  {
- $res = $str;
-  }
- return $res;
-} 
-
-
-/* Get first image */
-
-function get_first_image() {
- global $post, $posts;
- $first_img = '';
- $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
- if(isset($matches[1][0])){
- $first_img = $matches [1][0];
- return $first_img;
- }  
-}  
-
-function ne_section_text() {
-    $options = get_option('neuro');
-    if ($file = $options['file']) {
-        echo "Logo preview<br /><br /><img src='{$file['url']}' /><br /><br />";
-        
-        
-
-    }
-}
-
-function ne_setting_filename() {
-  }
-  
 /* Custom Menu */   
   
 add_action( 'init', 'register_my_menu' );
