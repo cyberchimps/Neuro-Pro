@@ -486,7 +486,7 @@ array( "type" => "close-tab"),
 
 
 
-// Header
+// Header/SOCIAL
 
 array( "id" => $shortname."-tab3",
 	"type" => "open-tab"),
@@ -509,6 +509,12 @@ array( "name" => "Facebook URL",
 array( "name" => "Twitter URL",  
     "desc" => "Enter your Twitter URL to display the Twitter social icon (to hide enter the word: hide).",  
     "id" => $shortname."_twitter",  
+    "type" => "text",  
+    "std" => ""),
+
+array( "name" => "Google + URL",  
+    "desc" => "Enter your Google + URL to display the Google + social icon (to hide enter the word: hide).",  
+    "id" => $shortname."_gplus",  
     "type" => "text",  
     "std" => ""),
     
@@ -1500,4 +1506,4 @@ if ( isset( $_REQUEST['reset'] ))
 		}   		
 	
 	
-?>                                                                                                                                                                                                                                       
+?>
