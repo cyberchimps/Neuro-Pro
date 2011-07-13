@@ -2,6 +2,10 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 1.0.7 (7-13-11)
+-Added Google + social icon.
+-Fixed a WordPress 3.2 bug in update.php.
+
 Version 1.0.6 (7-6-11)
 -Adjusted theme option CSS to eliminate WordPress 3.2 footer styling conflict.
 -Security fix in comments.php removing $_SERVER variable statement.
