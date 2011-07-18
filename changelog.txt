@@ -2,6 +2,9 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 1.0.8 (7-18-11)
+-Fixed logo blowout issue related to adding Google + icon.
+
 Version 1.0.7 (7-13-11)
 -Added Google + social icon.
 -Fixed a WordPress 3.2 bug in update.php.
