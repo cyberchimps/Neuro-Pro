@@ -105,7 +105,7 @@ $options = get_option('neuro') ;
 					<!-- Inserts Site Logo -->
 					<?php  $logo = $options['ne_logo'] ; ?>
 					<?php 	 if ( $logo != ''): ?>
-							<div id="logo">
+							<div id="logo_img">
 								<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($logo); ?>" alt="logo"></a>
 							</div>
 						<?php endif;?>
