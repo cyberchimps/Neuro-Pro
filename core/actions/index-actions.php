@@ -34,7 +34,7 @@ function response_index_content() {
 		<?php response_sidebar_init(); ?>
 	<!--End @response sidebar init-->
 	<div class="row">
-		<div class="wrap">
+
 <!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
 	<!--End @response before content sidebar hook-->
@@ -105,7 +105,7 @@ function response_index_content() {
 		<?php response_after_content_sidebar(); ?>
 	<!--End @response after content sidebar hook-->
 	</div>
-</div>
+
 <?php }
 
 /**
