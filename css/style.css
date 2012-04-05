@@ -105,7 +105,12 @@ color:#fff;
 }
 
 
-#content {*margin-left: 0px; *margin-top: 15px;}
+#content {
+	background: #fff;
+	border-radius: 6px 0px 0px 6px;
+	padding: 20px;
+	border-right: 1px solid #aaa;
+	*margin-left: 0px; *margin-top: 15px;}
 
 #sidebar {*margin-top: 15px;}
 
@@ -141,11 +146,11 @@ color:#fff;
 }
 
 .wrap {
-	background: #fff;
+	background: #ccc;
 	box-shadow: 0 0 4px #202020;
-	padding: 20px;
-	border-radius: 8px;
+	border-radius: 6px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #dsq-content {background-color: white;

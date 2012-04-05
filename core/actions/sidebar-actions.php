@@ -98,13 +98,13 @@ function response_after_content_sidebar_markup() {
 	<?php endif;?>
 	
 	<?php if ($sidebar == 'two-right' OR  $sidebar == '3' ): ?>
-	<div id="sidebar-left" class="three columns">
+	<div id="sidebar-left" class="two columns">
 		<?php get_sidebar('left'); ?>
 	</div>
 	<?php endif;?> 
 	
 	<?php if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == '2' OR $sidebar == '3'): ?>
-	<div id="sidebar-right" class="three columns">
+	<div id="sidebar-right" class="two columns">
 		<?php get_sidebar('right'); ?>
 	</div>
 	<?php endif;?> <?php 
