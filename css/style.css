@@ -140,6 +140,11 @@ color:#fff;
 	margin-bottom: 15px;
 }
 
+.wrap {
+	background: #fff;
+	border: 1px solid #000;
+}
+
 #dsq-content {background-color: white;
 	padding: 5px 15px 20px 15px;
 	border: 1px solid;
