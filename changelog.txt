@@ -1,0 +1,34 @@
+Response Changelog
+
+****************************
+
+Version 1.0.4 (03-26-12)
+-Adding back old IE meta tag.
+
+Version 1.0.3 (03-22-12)
+-Adjustment to post pagination container.
+-Updated default font family.
+-Minor copy fix in page options.
+-IE Fix for boxes.
+-Updated response.pot.
+-Added Croatian language files.
+
+Version 1.0.2 (03-08-12)
+-Responsive design tweak.
+-Fixed Google Font library call for SSL support.
+-Added browser specific HTML classes for IE.
+-Conditional to stop breadcrumb links from appearing on attachment pages.
+-Additional code and script cleanup.
+
+Version 1.0.1 (03-03-12)
+-Margin fix for HTML tables.
+-Updated Foundation CSS.
+-Adjusted doctype. 
+-CSS tweak.
+-Fixed typo in theme options.
+-Fixed IE quirks mode bug. 
+-Fixed page titles not showing up by default.
+
+Version 1.0 (02-24-12)
+-Initial release.
+
