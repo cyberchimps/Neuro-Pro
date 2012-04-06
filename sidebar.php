@@ -4,15 +4,10 @@
     
 		<div class="widget-container">    
 		<h2 class="widget-title">Welcome to Response Pro</h2>
-    	<ul>
-						<li>Thank you for purchasing Response Pro.</li>
-						<li>&nbsp;</li>
-						<li>We designed Response Pro to be as user friendly as possible, but if you do run into trouble we provide a <a href="http://cyberchimps.com/forum">support forum</a>, and <a href="http://www.cyberchimps.com/response-pro/docs/">precise documentation</a>.</li>
-						<li>&nbsp;</li>
-						<li>If we were all designers then every WordPress theme would look this good.</li>
-						<li>&nbsp;</li>
-						<li>(To remove this Widget login to your admin account, go to Appearance, then Widgets and drag new widgets into Sidebar Widgets)</li>
-					</ul>
+						<p>Thank you for purchasing Response Pro.</p>
+						<p>We designed Response Pro to be as user friendly as possible, but if you do run into trouble we provide a <a href="http://cyberchimps.com/forum">support forum</a>, and <a href="http://www.cyberchimps.com/response-pro/docs/">precise documentation</a>.</p>
+						<p>If we were all designers then every WordPress theme would look this good.</p>
+						<p>(To remove this Widget login to your admin account, go to Appearance, then Widgets and drag new widgets into Sidebar Widgets)</p>
     	</div>
 		
 		<div class="widget-container">    
