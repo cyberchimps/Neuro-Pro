@@ -31,7 +31,7 @@ function response_box_section_content() {
 	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);
 	$root = get_template_directory_uri(); ?>
 	
-<div class="row">
+<div class="row" id="boxwrap">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Left") ) : ?>
 			<div id="box1" class="four columns">
 				<div style="padding:15px;">
