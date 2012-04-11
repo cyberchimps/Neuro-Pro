@@ -6,64 +6,64 @@
 jQuery(document).ready(function($) {
 
 	
-  $("#section-re_font").change(function() {
+  $("#section-ne_font").change(function() {
     if($(this).find(":selected").val() == 'custom') {
-      $('#section-re_custom_font').fadeIn();
+      $('#section-ne_custom_font').fadeIn();
     } else {
-      $('#section-re_custom_font').hide();
+      $('#section-ne_custom_font').hide();
     }
   }).change();
-  $("#section-re_menu_font").change(function() {
+  $("#section-ne_menu_font").change(function() {
     if($(this).find(":selected").val() == 'custom') {
-      $('#section-re_custom_menu_font').fadeIn();
+      $('#section-ne_custom_menu_font').fadeIn();
     } else {
-      $('#section-re_custom_menu_font').hide();
+      $('#section-ne_custom_menu_font').hide();
     }
   }).change();
-  $("#re_show_excerpts").change(function() {
-    var toShow = $("#section-re_excerpt_link_text, #section-re_excerpt_length");
+  $("#ne_show_excerpts").change(function() {
+    var toShow = $("#section-ne_excerpt_link_text, #section-ne_excerpt_length");
     if($(this).is(':checked')) {
       toShow.show();
     } else {
       toShow.hide();
     }
   }).change();
-  $("#re_show_featured_images").change(function() {
-    var toShow = $("#section-re_featured_image_align, #section-re_featured_image_height, #section-re_featured_image_width");
+  $("#ne_show_featuned_images").change(function() {
+    var toShow = $("#section-ne_featuned_image_align, #section-ne_featured_image_height, #section-ne_featured_image_width");
     if($(this).is(':checked')) {
       toShow.show();
     } else {
       toShow.hide();
     }
   }).change();
-    $("#re_disable_footer").change(function() {
-    var toShow = $("#section-re_footer_text, #section-re_hide_link");
+    $("#ne_disable_footer").change(function() {
+    var toShow = $("#section-ne_footer_text, #section-ne_hide_link");
     if($(this).is(':checked')) {
       toShow.fadeIn();
     } else {
       toShow.fadeOut();
     }
   }).change();
-    $("#re_custom_logo").change(function() {
-    var toShow = $("#section-re_logo");
+    $("#ne_custom_logo").change(function() {
+    var toShow = $("#section-ne_logo");
     if($(this).is(':checked')) {
       toShow.show();
     } else {
       toShow.hide();
     }
   }).change();
-    $("#re_blog_custom_callout_options").change(function() {
-    var toShow = $("#section-re_blog_callout_text_color");
+    $("#ne_blog_custom_callout_options").change(function() {
+    var toShow = $("#section-ne_blog_callout_text_color");
     if($(this).is(':checked')) {
       toShow.fadeIn();
     } else {
       toShow.fadeOut();
     }
   }).change();
-  $("#re_slider_type").change(function(){
+  $("#ne_slider_type").change(function(){
     var val = $(this).val(),
-      post = $("#section-re_slider_category"),
-      custom = $("#section-re_customslider_category");
+      post = $("#section-ne_slider_category"),
+      custom = $("#section-ne_customslider_category");
     if(val == 'custom') {
       post.hide(); custom.show();
     } else {
@@ -73,7 +73,7 @@ jQuery(document).ready(function($) {
   
   
   $.each(['twitter', 'facebook', 'gplus', 'flickr', 'linkedin', 'youtube', 'googlemaps', 'email', 'rsslink'], function(i, val) {
-	  $("#section-re_" + val).each(function(){
+	  $("#section-ne_" + val).each(function(){
 		  var $this = $(this), $next = $(this).next();
 		  $this.find(".controls").css({float: 'left', clear: 'both'});
 		  $next.find(".controls").css({float: 'right', width: 80});
@@ -133,7 +133,7 @@ jQuery(function($) {
 		initialize($(this).attr('id'));
 	});
 
-	$("input[name='response[re_blog_section_order]']").change(function(){
+	$("input[name='neuro[ne_blog_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
 			response_blog_slider: "subsection-featureslider",
@@ -152,12 +152,12 @@ jQuery(function($) {
 		});
 	}).trigger('change');
 	
-	$("input[name='response[header_section_order]']").change(function(){
+	$("input[name='neuro[header_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
-			response_sitename_contact: "section-re_header_contact",
-			response_custom_header_element: "section-re_custom_header_element",
-			response_banner: "section-re_banner"
+			response_sitename_contact: "section-ne_header_contact",
+			response_custom_header_element: "section-ne_custom_header_element",
+			response_banner: "section-ne_banner"
 			// , response_box_section: ""
 		};
 
