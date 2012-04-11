@@ -15,8 +15,17 @@
 	$themeslug = 'ne';
 	$pagedocs = 'http://cyberchimps.com/question/using-the-neuro-pro-page-options/';
 	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-feature-slider-in-neuro-pro/';
-	$root = get_template_directory_uri(); 
+	$root = get_template_directory_uri(); 	
 	
+/**
+* Assign new default font.
+*/ 
+function neuro_default_font( $font ) {
+	$font = 'Helvetica';
+	return $font;
+}
+add_filter( 'response_default_font', 'neuro_default_font' );
+
 /**
 * Basic theme setup.
 */ 
