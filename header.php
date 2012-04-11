@@ -42,6 +42,9 @@
 			}
 		}
 	?>
+<!-- Begin @response_navigation hook-->	
+	<?php if ($options->get($themeslug.'_full_menu') == '1') { response_navigation();} ?>
+<!-- End @response_navigation hook-->	
 </header>
 
 <!-- Begin @response after_header hook -->

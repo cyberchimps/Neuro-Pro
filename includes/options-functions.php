@@ -1,6 +1,6 @@
 <?php
 /**
-* Functions related to the Response Theme Options.
+* Functions related to the Neuro Theme Options.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,13 +11,25 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Response
-* @since 1.0
+* @package Neuro
+* @since 2.0
 */
 
+/* Full width nav options*/
+function neuro_full_nav() {
+	global $options, $themeslug;
+	$enable = $options->get($themeslug.'_full_menu');
+	
+	if ($enable == '1') {
+		echo "<style type='text/css'>";
+		echo ".wrap {border-radius: 0px 0px 0px 0px;}";
+		echo "</style>";
+	}
+}
+add_action( 'wp_head', 'neuro_full_nav' );
 /* Standard Web Layout*/
 
-function response_content_layout() {
+function neuro_content_layout() {
 	global $options, $themeslug, $post;
 	
 	if (is_single()) {
@@ -60,7 +72,7 @@ function response_content_layout() {
 	}
 
 }
-add_action( 'wp_head', 'response_content_Layout' );
+add_action( 'wp_head', 'neuro_content_Layout' );
 
 /* Widget Title Background*/
 
