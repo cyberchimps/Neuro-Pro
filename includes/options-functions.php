@@ -52,14 +52,14 @@ function background_option() {
 	if ($options->get($themeslug.'_background_image')  == "blue" && $options->get($themeslug.'_custom_background') != "1")  {
 	
 		echo '<style type="text/css">';
-		echo "body {background-image: url('$root/images/backgrounds/blue.jpg'); background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
+		echo "body {background-image: url('$root/images/backgrounds/blue.jpg'); background-repeat: repeat; background-position: top center; background-attachment: fixed;}";
 		echo '</style>';
 	}
 	
 	if ($options->get($themeslug.'_background_image') == "pink" && $options->get($themeslug.'_custom_background') != "1")   {
 	
 		echo '<style type="text/css">';
-		echo "body {background-image: url('$root/images/backgrounds/pink.png'); background-color: #000; background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
+		echo "body {background-image: url('$root/images/backgrounds/pink.png'); background-color: #000; background-repeat-x: repeat-x; background-position: top center; background-attachment: fixed;}";
 		echo '</style>';
 	}
 	
