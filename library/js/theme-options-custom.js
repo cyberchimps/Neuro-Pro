@@ -13,6 +13,14 @@ jQuery(document).ready(function($) {
       $('#section-ne_custom_font').hide();
     }
   }).change();
+   $("#ne_custom_background").change(function() {
+    var toShow = $("#section-ne_background_upload, #section-ne_bg_image_position, #section-ne_bg_image_repeat, #section-ne_background_color, #section-ne_bg_image_attachment ");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+   }).change();
   $("#section-ne_menu_font").change(function() {
     if($(this).find(":selected").val() == 'custom') {
       $('#section-ne_custom_menu_font').fadeIn();
