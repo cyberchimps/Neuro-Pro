@@ -15,6 +15,72 @@
 * @since 2.0
 */
 
+/* Backgound Option*/
+
+function background_option() {
+
+	global $options, $themeslug;
+	$root = get_template_directory_uri();
+	$customsource = $options->get($themeslug.'_background_upload');
+	$custom = stripslashes($customsource['url']);
+	$repeat = $options->get($themeslug.'_bg_image_repeat');
+	$position = $options->get($themeslug.'_bg_image_position');
+	$attachment = $options->get($themeslug.'_bg_image_attachment');
+	$color = $options->get($themeslug.'_background_color');
+	
+	if ($options->get($themeslug.'_background_image') == "" OR $options->get($themeslug.'_background_image') == "wood" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/wood.jpg'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image') == "grey" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/grey.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image') == "neuro" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/neurobg.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image')  == "blue" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/blue.jpg'); background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image') == "pink" && $options->get($themeslug.'_custom_background') != "1")   {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/pink.png'); background-color: #000; background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image') == "space" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/neuros.jpg'); background-color: #000; background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_custom_background') == "1") {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$custom'); background-color: $color; background-repeat: $repeat; background-position: $position; background-attachment: $attachment;}";
+		echo '</style>';
+	
+	}
+	
+}
+add_action( 'wp_head', 'background_option');
+
 /* Full width nav options*/
 function neuro_full_nav() {
 	global $options, $themeslug;
