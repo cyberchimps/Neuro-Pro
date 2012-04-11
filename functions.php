@@ -10,17 +10,17 @@
 /**
 * Define global theme functions.
 */ 
-	$themename = 'response';
-	$themenamefull = 'Response Pro';
-	$themeslug = 're';
-	$pagedocs = 'http://cyberchimps.com/question/using-the-response-pro-page-options/';
-	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-feature-slider-in-response-pro/';
+	$themename = 'neuro';
+	$themenamefull = 'Neuro Pro';
+	$themeslug = 'ne';
+	$pagedocs = 'http://cyberchimps.com/question/using-the-neuro-pro-page-options/';
+	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-feature-slider-in-neuro-pro/';
 	$root = get_template_directory_uri(); 
 	
 /**
 * Basic theme setup.
 */ 
-function response_theme_setup() {
+function neuro_theme_setup() {
 	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
 	
 	add_theme_support(
@@ -33,29 +33,29 @@ function response_theme_setup() {
 	add_editor_style();
 	add_custom_background();
 }
-add_action( 'after_setup_theme', 'response_theme_setup' );
+add_action( 'after_setup_theme', 'neuro_theme_setup' );
 
 /**
 * Redirect user to theme options page after activation.
 */ 
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
-	wp_redirect( 'themes.php?page=response' );
+	wp_redirect( 'themes.php?page=neuro' );
 }
 
 /**
 * Add link to theme options in Admin bar.
 */ 
-function response_admin_link() {
+function neuro_admin_link() {
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'Response', 'title' => 'Response Pro Options', 'href' => admin_url('themes.php?page=response')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'neuro', 'title' => 'Neuro Pro Options', 'href' => admin_url('themes.php?page=neuro')  ) ); 
 }
-add_action( 'admin_bar_menu', 'response_admin_link', 113 );
+add_action( 'admin_bar_menu', 'neuro_admin_link', 113 );
 
 /**
 * Custom markup for gallery posts in main blog index.
 */ 
-function response_custom_gallery_post_format( $content ) {
+function neuro_custom_gallery_post_format( $content ) {
 	global $options, $themeslug, $post;
 	$root = get_template_directory_uri(); 
 	
@@ -68,7 +68,7 @@ function response_custom_gallery_post_format( $content ) {
 		<?php endif;?>
 				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					<!--Call @Core Meta hook-->
-			<?php response_post_byline(); ?>
+			<?php neuro_post_byline(); ?>
 				<?php
 				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single() ) {
  		 			echo '<div class="featured-image">';
@@ -107,12 +107,12 @@ function response_custom_gallery_post_format( $content ) {
 	
 	return $content;
 }
-add_filter('response_post_formats_gallery_content', 'response_custom_gallery_post_format' ); 
+add_filter('neuro_post_formats_gallery_content', 'neuro_custom_gallery_post_format' ); 
 	
 /**
 * Set custom post excerpt link text based on theme option.
 */ 
-function response_excerpt_link($more) {
+function neuro_excerpt_link($more) {
 
 	global $themename, $themeslug, $options, $post;
     
@@ -125,12 +125,12 @@ function response_excerpt_link($more) {
 
 	return '<a href="'. get_permalink($post->ID) . '"> <br /><br /> '.$linktext.'</a>';
 }
-add_filter('excerpt_more', 'response_excerpt_link');
+add_filter('excerpt_more', 'neuro_excerpt_link');
 
 /**
 * Set custom post excerpt length based on theme option.
 */ 
-function response_excerpt_length($length) {
+function neuro_excerpt_length($length) {
 
 	global $themename, $themeslug, $options;
 	
@@ -143,12 +143,12 @@ function response_excerpt_length($length) {
     	
 	return $length;
 }
-add_filter('excerpt_length', 'response_excerpt_length');
+add_filter('excerpt_length', 'neuro_excerpt_length');
 
 /**
 * Custom featured image size based on theme options.
 */ 
-function response_featured_image() {	
+function neuro_featured_image() {	
 	if ( function_exists( 'add_theme_support' ) ) {
 	
 	global $themename, $themeslug, $options;
@@ -168,12 +168,12 @@ function response_featured_image() {
 	set_post_thumbnail_size( $featurewidth, $featureheight, true );
 	}	
 }
-add_action( 'init', 'response_featured_image', 11);	
+add_action( 'init', 'neuro_featured_image', 11);	
 
 /**
 * Attach CSS3PIE behavior to elements
 */   
-function response_pie() { ?>
+function neuro_pie() { ?>
 	
 	<style type="text/css" media="screen">
 		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section, #carousel_list, #calloutwrap, #calloutbutton, .box1, .box2, .box3, .es-carousel-wrapper
@@ -185,12 +185,12 @@ function response_pie() { ?>
 <?php
 }
 
-add_action('wp_head', 'response_pie', 8);
+add_action('wp_head', 'neuro_pie', 8);
 
 /**
 * Custom post types for Slider, Carousel.
 */ 
-function response_create_post_type() {
+function neuro_create_post_type() {
 
 	global $themename, $themeslug, $options, $root;
 	
@@ -226,12 +226,12 @@ function response_create_post_type() {
 		)
 	);
 }
-add_action( 'init', 'response_create_post_type' );
+add_action( 'init', 'neuro_create_post_type' );
 
 /**
 * Custom taxonomies for Slider, Carousel.
 */ 
-function response_custom_taxonomies() {
+function neuro_custom_taxonomies() {
 
 	global $themename, $themeslug, $options;
 	
@@ -256,12 +256,12 @@ function response_custom_taxonomies() {
 		)
 	);
 }
-add_action('init', 'response_custom_taxonomies', 0);
+add_action('init', 'neuro_custom_taxonomies', 0);
 
 /**
 * Assign default category for Slider, Carousel posts.
 */ 
-function response_custom_taxonomy_default( $post_id, $post ) {
+function neuro_custom_taxonomy_default( $post_id, $post ) {
 
 	global $themename, $themeslug, $options;	
 
@@ -288,12 +288,12 @@ function response_custom_taxonomy_default( $post_id, $post ) {
 	}
 }
 
-add_action( 'save_post', 'response_custom_taxonomy_default', 100, 2 );
+add_action( 'save_post', 'neuro_custom_taxonomy_default', 100, 2 );
 
 /**
 * Add TypeKit support based on theme option.
 */ 
-function response_typekit_support() {
+function neuro_typekit_support() {
 	global $themename, $themeslug, $options;
 	
 	$embed = $options->get($themeslug.'_typekit');
@@ -301,45 +301,45 @@ function response_typekit_support() {
 	echo stripslashes($embed);
 
 }
-add_action('wp_head', 'response_typekit_support');
+add_action('wp_head', 'neuro_typekit_support');
 
 /**
 * Add Google Analytics support based on theme option.
 */ 
-function response_google_analytics() {
+function neuro_google_analytics() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_ga_code'));
 
 }
-add_action('wp_head', 'response_google_analytics');
+add_action('wp_head', 'neuro_google_analytics');
 
 /**
 * Add custom header scripts support based on theme option.
 */ 
-function response_custom_scripts() {
+function neuro_custom_scripts() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_custom_header_scripts'));
 
 }
-add_action('wp_head', 'response_custom_scripts');
+add_action('wp_head', 'neuro_custom_scripts');
 
 	
 /**
 * Register custom menus for header, footer.
 */ 
-function response_register_menus() {
+function neuro_register_menus() {
 	register_nav_menus(
 	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ), 'sub-menu' => __( 'Sub Menu' ))
   );
 }
-add_action( 'init', 'response_register_menus' );
+add_action( 'init', 'neuro_register_menus' );
 	
 /**
 * Menu fallback if custom menu not used.
 */ 
-function response_menu_fallback() {
+function neuro_menu_fallback() {
 	global $post; ?>
 	
 	<ul id="nav_menu">
@@ -349,7 +349,7 @@ function response_menu_fallback() {
 /**
 * Register widgets.
 */ 
-function response_widgets_init() {
+function neuro_widgets_init() {
     register_sidebar(array(
     	'name' => 'Full Sidebar',
     	'id'   => 'sidebar-widgets',
@@ -415,10 +415,10 @@ function response_widgets_init() {
 		'after_title' => '</h3>',
 	));
 }
-add_action ('widgets_init', 'response_widgets_init');
+add_action ('widgets_init', 'neuro_widgets_init');
 
 /**
-* Initialize response Core Framework and Pro Extension.
+* Initialize neuro Core Framework and Pro Extension.
 */ 
 require_once ( get_template_directory() . '/core/core-init.php' );
 require_once ( get_template_directory() . '/core/pro/pro-init.php' );
@@ -469,7 +469,7 @@ $data['wpversion'] = get_bloginfo('version');
 foreach ( $data as $k => $v ) {
 $url .= $k . '/' . $v . '/';
 }
-$response = wp_remote_get( $url );
+$neuro = wp_remote_get( $url );
 set_transient('presstrends_data', $data, 60*60*24);
 }}
 add_action('admin_init', 'presstrends');

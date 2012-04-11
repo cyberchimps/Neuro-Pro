@@ -82,7 +82,7 @@ $options
 						->textarea($themeslug."_typekit", "TypeKit Code")
 		->subsection_end()
 		->subsection("Layout")
-			->text($themeslug."_row_max_width", "Row Max Width", array('default' => '1020px'))
+			->text($themeslug."_row_max_width", "Row Max Width", array('default' => '980px'))
 		->subsection_end()
 		->subsection("Custom Colors")
 			->color($themeslug."_text_color", "Text Color")
