@@ -81,6 +81,20 @@ function background_option() {
 }
 add_action( 'wp_head', 'background_option');
 
+/* Header Wrap Option*/
+function neuro_header_wrap() {
+	global $options, $themeslug;
+	$enable = $options->get($themeslug.'_header_wrap');
+	
+	if ($enable == '1') {
+		echo "<style type='text/css'>";
+		echo "#menu {border-radius: 0px 0px 0px 0px;}";
+		echo "#header_wrap {border-radius: 6px 6px 0px 0px; background-color: #F8F8F8;}";
+		echo "</style>";
+	}
+}
+add_action( 'wp_head', 'neuro_header_wrap' );
+
 /* Full width nav options*/
 function neuro_full_nav() {
 	global $options, $themeslug;
@@ -93,6 +107,7 @@ function neuro_full_nav() {
 	}
 }
 add_action( 'wp_head', 'neuro_full_nav' );
+
 /* Standard Web Layout*/
 
 function neuro_content_layout() {

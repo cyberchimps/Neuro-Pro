@@ -35,7 +35,8 @@
 <!-- End @response before_header hook content -->
 			
 <header>
-		
+	<div class="row">
+		<div id="header_wrap">
 	<?php
 		foreach(explode(",", $options->get('header_section_order')) as $fn) {
 			if(function_exists($fn)) {
@@ -43,7 +44,8 @@
 			}
 		}
 	?>
-	
+		</div>
+	</div>	
 <!-- Begin @response_navigation hook-->	
 	<?php if ($options->get($themeslug.'_full_menu') == '1') { response_navigation();} ?>
 <!-- End @response_navigation hook-->	
