@@ -156,6 +156,8 @@ function response_logo_menu_content() {
 			<div class="seven columns" id="halfmenu">
 			<div id="halfnav">
 			<?php wp_nav_menu( array(
+		    'items_wrap'      => '<ul id="halfnav_menu">%3$s</ul>',
+			'fallback_cb' => 'menu_fallback',
 		    'theme_location' => 'sub-menu' // Setting up the location for the main-menu, Main Navigation.
 			    )
 			);
