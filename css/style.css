@@ -716,7 +716,7 @@ textarea {margin-top: 10px;padding-bottom: 10px;width: 90%;}
 /* Fonts */
 
 body {
-  font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font: 13px/1.5 'Helvetica', Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
 hr {
