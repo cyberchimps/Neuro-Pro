@@ -1,5 +1,11 @@
 .subheader_icons img {height: 16px;}
 
+.subheader_icons { margin-top: 5px;}
+
+#subheader .description {margin-top: 8px;  color: white; font-size: 12px;}
+
+#subheader {margin-bottom: 15px;}
+
 /* Page Elements */
 
 #orbitDemo {border: 1px solid #f1f2f3;}

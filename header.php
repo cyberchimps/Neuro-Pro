@@ -35,7 +35,9 @@
 <!-- End @response before_header hook content -->
 			
 <header>
-	<?php response_subheader();?>
+
+<?php if ($options->get($themeslug.'_subheader') == '1') { response_subheader();} ?>
+
 	<div class="row">
 		<div id="header_wrap">
 	<?php
