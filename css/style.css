@@ -419,9 +419,9 @@ a:hover {color: #0085CF;}
 
 .prev-posts { float: right;padding: 5px 0 5px 0; }
 
-#crumbs {border: 1px solid #DDD; margin-bottom: 15px; background: #FFF;}
+#crumbs {border: 1px solid #f1f2f3; margin-bottom: 15px; background: #FFF;}
 
-.crumbs_text {padding: 5px 0 5px 15px;}
+.crumbs_text {padding: 0px 0 5px 15px;}
 
 #post_pagination {border: 1px solid #f1f2f3; margin-bottom: 15px; background: #FFF;}
 
