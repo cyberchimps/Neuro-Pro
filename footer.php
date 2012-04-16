@@ -1,6 +1,6 @@
 <?php 
 /**
-* Footer template used by the CyberChimps Response Core Framework
+* Footer template used by Neuro.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Response
-* @since 1.0
+* @package Neuro.
+* @since 2.0
 */
 
 	global $options, $themeslug // call globals
