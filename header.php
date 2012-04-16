@@ -35,6 +35,7 @@
 <!-- End @response before_header hook content -->
 			
 <header>
+	<?php response_subheader();?>
 	<div class="row">
 		<div id="header_wrap">
 	<?php
