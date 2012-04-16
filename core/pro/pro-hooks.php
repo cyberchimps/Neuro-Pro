@@ -23,6 +23,14 @@ function response_box_section() {
 }
 
 /** 
+* Box Section
+*/
+function response_subheader() {
+	do_action ('response_subheader');
+}
+
+
+/** 
 * Callout Section
 */
 function response_callout_section() {

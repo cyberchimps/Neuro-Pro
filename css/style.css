@@ -36,6 +36,10 @@ body {background: #fff;}
 
 }
 
+#subheader {
+	background:url(../images/subheaderdark.png);
+}
+
 #container {
 	margin-left: auto;
 	margin-right: auto;
@@ -122,8 +126,6 @@ color:#fff;
 
 
 /* Header  */
-
-header {margin-top: 15px;}
 
 #header_contact{ text-align:right;}
 
