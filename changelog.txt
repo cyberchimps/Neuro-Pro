@@ -1,34 +1,41 @@
-Response Changelog
+Neuro Pro Changelog
 
 ****************************
 
-Version 1.0.4 (03-26-12)
--Adding back old IE meta tag.
+Version 2.0 (04-17-11)
+-Moved to CyberChimps Response Core Framework. 
 
-Version 1.0.3 (03-22-12)
--Adjustment to post pagination container.
--Updated default font family.
--Minor copy fix in page options.
--IE Fix for boxes.
--Updated response.pot.
--Added Croatian language files.
+Version 1.0.8 (7-18-11)
+-Fixed logo blowout issue related to adding Google + icon.
 
-Version 1.0.2 (03-08-12)
--Responsive design tweak.
--Fixed Google Font library call for SSL support.
--Added browser specific HTML classes for IE.
--Conditional to stop breadcrumb links from appearing on attachment pages.
--Additional code and script cleanup.
+Version 1.0.7 (7-13-11)
+-Added Google + social icon.
+-Fixed a WordPress 3.2 bug in update.php.
 
-Version 1.0.1 (03-03-12)
--Margin fix for HTML tables.
--Updated Foundation CSS.
--Adjusted doctype. 
--CSS tweak.
--Fixed typo in theme options.
--Fixed IE quirks mode bug. 
--Fixed page titles not showing up by default.
+Version 1.0.6 (7-6-11)
+-Adjusted theme option CSS to eliminate WordPress 3.2 footer styling conflict.
+-Security fix in comments.php removing $_SERVER variable statement.
+-Cleaned up options.php, removed unnecessary functions.
+-Now enqueueing WordPress jQuery library instead of Google's for offline functionality. 
 
-Version 1.0 (02-24-12)
--Initial release.
+Version 1.0.5 (6-13-11)
+-API added for push updates.
+-jQuery noconflict patch to fix third-party plugin compatibility issues.
 
+Version 1.0.4 (6-07-11)
+-Fixed additional custom slide bug created by previous fix.
+-Fixed bold font-weight in post container not fully displaying.
+
+Version 1.0.3 (6-06-11)
+-Fixed Custom Slide bug with "blog pages show at most" setting.
+
+Version 1.0.2 (6-01-11)
+-Minor bug fixes
+
+Version 1.0.1 (5-31-11)
+-Default background/color scheme changed to wood/black.
+-Changed social icons, removed broken IE alpha transparency fix.
+-General bug fixes.
+
+Version 1.0 (5-20-11)
+-Initial Release.
