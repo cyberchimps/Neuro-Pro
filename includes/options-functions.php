@@ -88,7 +88,7 @@ function neuro_header_wrap() {
 	
 	if ($enable == '1') {
 		echo "<style type='text/css'>";
-		echo "#menu {border-radius: 0px 0px 0px 0px;}";
+		echo "#fullmenu {border-radius: 0px 0px 0px 0px;}";
 		echo "#header_wrap {border-radius: 6px 6px 0px 0px;background-color: #F8F8F8;padding-top: 26px;padding-bottom: 20px;}";
 		echo "h1.sitename a {color: black; text-shadow: 1px 2px #fff;}";
 		echo "h1.sitename a:hover {color: #0085CF;}";
