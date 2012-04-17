@@ -188,7 +188,6 @@ color:#fff;
     display: none;
 	background-color: #FFF;
     border: 1px solid #E6E6E6;
-    box-shadow: 0 1px 1px 0 #eee;
     margin: 10px 0 0;
     padding: 8px 0 0;
     position: absolute;
@@ -211,7 +210,6 @@ color:#fff;
     display: none;
 	background-color: #FFF;
     border: 1px solid #E6E6E6;
-    box-shadow: 0 1px 1px 0 #eee;
     margin: 20px 0 0;
     padding: 8px 0 0;
     position: absolute;
@@ -243,7 +241,6 @@ color:#fff;
 #fullnav #fullnav_menu > li:hover > a {
 	color: #5ca9d6;
 	font-weight: 500;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 #fullnav #fullnav_menu li:hover > ul {
 	display: block;
