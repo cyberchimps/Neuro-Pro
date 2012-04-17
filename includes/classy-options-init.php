@@ -120,7 +120,7 @@ $options
 			->checkbox($themeslug."_header_wrap", "Header Wrap")
 			->checkbox($themeslug."_full_menu", "Full Width Menu" , array('default' => true))
 			->checkbox($themeslug."_custom_logo", "Custom Logo" , array('default' => true))
-			->upload($themeslug."_logo", "Logo", array('default' => array('url' => TEMPLATE_URL . '/images/responselogo.png')))
+			->upload($themeslug."_logo", "Logo", array('default' => array('url' => TEMPLATE_URL . '/images/neuropro.png')))
 			->upload($themeslug."_favicon", "Custom Favicon")
 		->subsection_end()
 		->subsection("Social")
