@@ -30,6 +30,11 @@
 		<?php response_footer(); ?>
 	<!-- End @response footer hook content-->
 				</div>
+			<div class="row" >
+				<div id="credit" class="twelve columns">
+					<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
+				</div>
+			</div>
 	<?php endif;?>
 	
 

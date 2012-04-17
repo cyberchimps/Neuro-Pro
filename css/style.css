@@ -1,4 +1,4 @@
-/* Response Pro Style.css */
+/* Neuro Pro Style.css */
 
 /* Reset and Design Constant Styles */
 
@@ -666,7 +666,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #afterfootercopyright {text-align: right;}
 
-#credit {text-align: left;margin-bottom: 3px;}
+#credit {text-align: center;margin-bottom: 3px;padding-top:10px}
 
 /* WordPress Styles  */
 
