@@ -2,9 +2,7 @@ jQuery(document).ready(function($){
 		jQuery('.response-tabbed-wrap').tabs();
 });
 
-jQuery(document).ready(function($){
-	$("ul").parent("li").addClass("parent"); 
-});
+
 
 jQuery(document).ready(function($) {
 	$('#halfnav_menu .sub-menu').hide();
