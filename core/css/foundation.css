@@ -1157,7 +1157,7 @@ div.slider-nav span.left {
 	#afterfootermenu {display:none !important;}
 	#credit {text-align: center !important; margin-right:15px !important; margin-top:4px !important;}
 	#afterfootercopyright {float: left !important;margin-left:15px !important;margin-bottom:2px !important;}
-	#mobileMenu_nav_menu {float: right !important; margin-top: 10px !important; margin-right: 10px !important;}
+	#mobileMenu_fullnav_menu {float: right !important; margin-top: 10px !important; margin-right: 10px !important;}
 	#menu {height: 35px !important;}
 	.orbit-bullets li.has-thumb {
     background: none;
