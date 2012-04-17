@@ -658,7 +658,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 	padding-top: 10px;
 }
 
-#afterfootercopyright {text-align: right;}
+#afterfootercopyright {text-align: right; float: right;}
 
 #credit {text-align: center;margin-bottom: 3px;padding-top:10px}
 

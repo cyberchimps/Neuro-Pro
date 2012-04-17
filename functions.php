@@ -34,6 +34,11 @@ function neuro_default_font( $font ) {
 }
 add_filter( 'response_default_font', 'neuro_default_font' );
 
+function neuro_remove_credit() {
+	remove_action ( 'response_secondary_footer', 'response_secondary_footer_credit' );
+}
+add_action( 'init', 'neuro_remove_credit' );
+
 /**
 * Basic theme setup.
 */ 
