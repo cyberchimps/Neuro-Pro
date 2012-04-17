@@ -37,7 +37,7 @@
 <header>
 
 <?php if ($options->get($themeslug.'_subheader') == '1') { response_subheader();} ?>
-
+<div class="container">
 	<div class="row">
 		<div id="header_wrap">
 	<?php
@@ -49,6 +49,7 @@
 	?>
 		</div>
 	</div>	
+</div>
 <!-- Begin @response_navigation hook-->	
 	<?php if ($options->get($themeslug.'_full_menu') == '1') { response_navigation();} ?>
 <!-- End @response_navigation hook-->	
