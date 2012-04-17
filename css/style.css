@@ -162,9 +162,10 @@ color:#fff;
 
 /* Nav  */
 #fullnav {
-    float: right;
     margin-top: 5px;
     position: relative;
+    overflow: visible;
+    min-height:40px;
 }
 #fullnav ul {
 	list-style: none;
