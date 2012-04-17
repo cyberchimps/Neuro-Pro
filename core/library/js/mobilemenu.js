@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	$('#nav_menu').mobileMenu();
+	$('#fullnav_menu').mobileMenu();
 });
 
 (function($){
