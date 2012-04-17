@@ -163,7 +163,7 @@ color:#fff;
 /* Nav  */
 #fullnav {
     float: right;
-    margin-top: 25px;
+    margin-top: 10px;
     position: relative;
 }
 #fullnav ul {
@@ -231,15 +231,11 @@ color:#fff;
 }
 
 #fullnav #fullnav_menu > li > a {
-	background: #FBFBFB;
-	background: -moz-linear-gradient(center top , #FBFBFB 0%, #E4E5E5 100%) repeat scroll 0 0 transparent;
-	border-radius: 3px 3px 3px 3px;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    color: #555555;
+	background: transparent;
+    color: #fff;
     display: inline-block;
     font-size: 16px;
     line-height: 20px;
-    border: 1px solid #AAAAAA;
     cursor: pointer;
     padding: 5px;
     position: relative;
