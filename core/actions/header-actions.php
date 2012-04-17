@@ -337,7 +337,7 @@ function response_nav() {
 
 			<div class="twelve columns" id="fullmenu">
 
-			<div id="nav" class="twelve columns">
+			<div id="fullnav" class="twelve columns">
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
