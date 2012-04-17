@@ -145,6 +145,143 @@ color:#fff;
 
 /* Nav  */
 
+#fullmenu {
+	color: #fff;
+	text-decoration: none;
+	overflow: visible;
+	margin-left: 0px;
+	font-weight: bold;
+	border-radius: 6px 6px 0px 0px;
+	background: #333;
+	border: 1px solid #222;
+	background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
+	background: -moz-linear-gradient(top,  #333,  #111);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#33333', endColorstr='#111111');
+}
+
+
+/* Nav  */
+#fullnav {
+    float: right;
+    margin-top: 25px;
+    position: relative;
+}
+#fullnav ul {
+	list-style: none;
+	margin: 0;
+}
+#fullnav li {
+	position: relative;
+}
+#fullnav li a {
+	display: block;
+	padding: 5px 10px;
+	font-weight: 400;
+	text-decoration:none;
+}
+#fullnav_menu > li {
+    padding: 0 0 20px 0;
+    float: left;
+    margin: 0 7px;
+}
+#fullnav #fullnav_menu > li > .sub-menu {
+    display: none;
+	background-color: #FFF;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0 1px 1px 0 #eee;
+    margin: 20px 0 0;
+    padding: 8px 0 0;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    float: left;
+    width: 180px;
+    z-index: 9999;
+}
+#fullnav #fullnav_menu > li > .sub-menu .nav_arrow {
+    background: url(../images/nav_arrow.png);
+    height: 11px;
+    left: 10px;
+    position: absolute;
+    top: -10px;
+    width: 14px;
+}
+
+#fullnav #fullnav_menu > li > .children {
+    display: none;
+	background-color: #FFF;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0 1px 1px 0 #eee;
+    margin: 20px 0 0;
+    padding: 8px 0 0;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    float: left;
+    width: 180px;
+    z-index: 9999;
+}
+#fullnav #fullnav_menu > li > .children .nav_arrow {
+    background: url(../images/nav_arrow.png);
+    height: 11px;
+    left: 10px;
+    position: absolute;
+    top: -10px;
+    width: 14px;
+}
+
+#fullnav #fullnav_menu > li > a {
+	background: #FBFBFB;
+	background: -moz-linear-gradient(center top , #FBFBFB 0%, #E4E5E5 100%) repeat scroll 0 0 transparent;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    color: #555555;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    border: 1px solid #AAAAAA;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+}
+#fullnav #fullnav_menu > li:hover > a {
+	background: #F8F8F8;
+    border: 1px solid #666666;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+#fullnav #fullnav_menu li:hover > ul {
+	display: block;
+}
+#fullnav ul ul > a {
+	color: #555555;
+}
+#fullnav ul ul a:hover {
+	background-color: #666666;
+    color: #FFFFFF;
+}
+#fullnav .parent-menu {
+	background: url(../images/down-menu-arrow.png) no-repeat right center;
+}
+#fullnav .parent-menu:hover {
+	background: #666666 url(../images/down-menu-arrow-hover.png) no-repeat right center;
+}
+#fullnav ul ul ul a {
+	background: url(../images/indent-menu-arrow.png) no-repeat left center;
+}
+#fullnav ul ul ul a:hover {
+	background: #666666 url(../images/indent-menu-arrow-hover.png) no-repeat left center;
+}
+#fullnav ul ul ul a {
+	text-indent: 10px;
+}
+#fullnav ul ul ul ul a {
+	text-indent: 20px;
+}
+#fullnav ul ul ul ul ul a {
+	text-indent: 30px;
+}
+
+
 /* Half Nav  */
 
 
@@ -285,8 +422,6 @@ color:#fff;
 #halfnav ul ul ul ul ul a {
 	text-indent: 30px;
 }
-
-
 
 /* Full Menu */
 
