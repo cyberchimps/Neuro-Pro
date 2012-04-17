@@ -26,6 +26,7 @@
 		<?php if ($options->get($themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
 	</div>
 	<div class="row">
+		<div class="wrap">
 	<!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
 	<!--End @response before content sidebar hook-->
@@ -79,7 +80,9 @@
 	<!--End @response after content sidebar hook-->
 	
 		</div><!--end content-->
+		</div><!--end wrap-->
 	</div><!--end row-->
 </div><!--end container-->
+
 
 <?php get_footer(); ?>
