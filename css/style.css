@@ -241,8 +241,8 @@ color:#fff;
     position: relative;
 }
 #fullnav #fullnav_menu > li:hover > a {
-	background: #F8F8F8;
-    border: 1px solid #666666;
+	color: 5ca9d6;
+	font-weight: 500;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 #fullnav #fullnav_menu li:hover > ul {
