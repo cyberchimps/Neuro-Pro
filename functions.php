@@ -407,10 +407,21 @@ add_action( 'init', 'neuro_register_menus' );
 /**
 * Menu fallback if custom menu not used.
 */ 
-function neuro_menu_fallback() {
+function neuro_full_menu_fallback() {
 	global $post; ?>
 	
-	<ul id="nav_menu">
+	<ul id="fullnav_menu">
+		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
+	</ul><?php
+}
+
+/**
+* Menu fallback if custom menu not used.
+*/ 
+function neuro_half_menu_fallback() {
+	global $post; ?>
+	
+	<ul id="halfnav_menu">
 		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
 	</ul><?php
 }
