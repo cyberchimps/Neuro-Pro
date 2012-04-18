@@ -4,7 +4,7 @@ a {color: #555;}
 
 a:hover {color: #888;}
 
-#fullnav	{
+#fullmenu	{
 	background: #000;
 	background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
 	background: -moz-linear-gradient(top,  #333,  #111);

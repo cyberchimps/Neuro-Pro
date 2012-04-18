@@ -154,7 +154,7 @@ function response_slider_content() {
 	$wordthumb = "h=$height&w=980";
 	$csWidth = '980';
 	$imgwidth = '980';
-	$defaultimage = "$root/images/pro/responseproslider.jpg";
+	$defaultimage = "$root/images/pro/neuroproslider.jpg";
 		
 /* End slider width variable */ 
 
