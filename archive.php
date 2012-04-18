@@ -22,48 +22,51 @@
 ?>
 
 <div class="container">
+
+	
 	<div class="row">
-		<?php if ($options->get($themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
-	</div>
-	<div class="row">
+	
 		<div class="wrap">
+		
+		<div class="row">
+	
 	<!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
 	<!--End @response before content sidebar hook-->
-	<?php if (have_posts()) : ?>
 	
-		<div id="content" class="<?php echo $content_grid; ?>">
+		<?php if (have_posts()) : ?>
+	
+			<div id="content" class="<?php echo $content_grid; ?>">
 		
-					
-		<!--Begin @response before_archive hook-->
+			<!--Begin @response before_archive hook-->
 			<?php response_before_archive(); ?>
-		<!--End @response before_archive hook-->
+			<!--End @response before_archive hook-->
 		
-		<?php while (have_posts()) : the_post(); ?>
+			<?php while (have_posts()) : the_post(); ?>
 		
-		<div class="post_container">
-			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+			<div class="post_container">
+			
+				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
-			<!--Begin @response archive hook-->
+				<!--Begin @response archive hook-->
 				<?php response_loop(); ?>
-			<!--End @response archive hook-->
+				<!--End @response archive hook-->
 			
-			</div><!--end post_class-->
+				</div><!--end post_class-->
 			
-			<!--Begin @response post bar hook-->
+				<!--Begin @response post bar hook-->
 				<?php response_post_bar(); ?>
-			<!--End @response post bar hook-->
+				<!--End @response post bar hook-->
 			
-		</div><!--end post container--> 
+			</div><!--end post container--> 
 	
-
 		 <?php endwhile; ?>
 	 
-	 <?php else : ?>
+		 <?php else : ?>
 
 		<h2>Nothing found</h2>
 
-	<?php endif; ?>
+		<?php endif; ?>
 
 		<!--Begin @response pagination hook-->
 			<?php response_pagination(); ?>
@@ -75,11 +78,12 @@
 	
 		</div><!--end content_padding-->
 
-	<!--Begin @response after content sidebar hook-->
+		<!--Begin @response after content sidebar hook-->
 		<?php response_after_content_sidebar(); ?>
-	<!--End @response after content sidebar hook-->
+		<!--End @response after content sidebar hook-->
 	
-		</div><!--end content-->
+			</div>
+			</div><!--end content-->
 		</div><!--end wrap-->
 	</div><!--end row-->
 </div><!--end container-->
