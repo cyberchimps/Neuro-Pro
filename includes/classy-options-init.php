@@ -59,21 +59,21 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 $options
 	->section("Welcome")
-		->info("<h1>Response Pro</h1>
+		->info("<h1>Neuro Pro</h1>
 		
-<p><strong>A Responsive Starter WordPress Theme</strong></p>
+<p><strong>A Responsive Blog WordPress Theme with Drag and Drop Theme Options</strong></p>
 
-<p>Response Pro includes a Responsive Design (which magically adjusts to mobile devices such as the iPhone and iPad), Responsive Slider, Drag & Drop Header Elements, Page and Blog Elements, simplified Theme Options, and is built with HTML5 and CSS3.</p>
+<p>Neuro Pro includes a Responsive Design (which magically adjusts to mobile devices such as the iPhone and iPad), Responsive Slider, Drag & Drop Header Elements, Page and Blog Elements, simplified Theme Options, and is built with HTML5 and CSS3.</p>
 
 <p>To get started simply work your way through the options below, add your content, and always remember to hit save after making any changes.</p>
 
-<p>The Response Pro Slider options are under the Response Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the response Pro Page Options as well.</p>
+<p>The Neuro Pro Slider options are under the Neuro Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the response Pro Page Options as well.</p>
 
-<p>If you are using the Response Pro Slider on a Page you can upload, and edit your slides from the Feature Slides menu available in the WP-Admin menu. Look for the CyberChimps logo.</p>
+<p>If you are using the Neuro Pro Slider on a Page you can upload, and edit your slides from the Feature Slides menu available in the WP-Admin menu. Look for the CyberChimps logo.</p>
 
-<p>We tried to make Response Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/responsepro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
+<p>We tried to make Neuro Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/neuropro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
 
-<p>Thank you for using Response Pro.</p>
+<p>Thank you for using Neuro Pro.</p>
 ")
 	->section("Design")
 		->open_outersection()
