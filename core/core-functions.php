@@ -52,6 +52,7 @@ function response_scripts() {
 	wp_register_script( 'modernizr' ,$path.'/js/foundation/modernizr.foundation.js');
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
 	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
+	wp_register_script( 'video' ,$path.'/js/video.js');
 	
 	wp_enqueue_script ('orbit');
 	wp_enqueue_script ('apps');
@@ -61,6 +62,7 @@ function response_scripts() {
 	wp_enqueue_script ('modernizr');
 	wp_enqueue_script ('menu');
 	wp_enqueue_script ('mobilemenu');
+	wp_enqueue_script ('video');
 }
 add_action('wp_enqueue_scripts', 'response_scripts');	
 
