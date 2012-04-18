@@ -278,6 +278,7 @@ input.button-primary {font-size:14px !important;}
 	display:none;
 	cursor:pointer;
 	float:right;
+	height: 80px;
 }
 #of_container .controls .of-radio-img-selected {
 	border:3px solid #aaa
