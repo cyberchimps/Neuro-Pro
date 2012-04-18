@@ -90,7 +90,7 @@ function neuro_custom_gallery_post_format( $content ) {
 		<?php endif;?>
 				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					<!--Call @Core Meta hook-->
-			<?php neuro_post_byline(); ?>
+			<?php response_post_byline(); ?>
 				<?php
 				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single() ) {
  		 			echo '<div class="featured-image">';
@@ -129,7 +129,7 @@ function neuro_custom_gallery_post_format( $content ) {
 	
 	return $content;
 }
-add_filter('neuro_post_formats_gallery_content', 'neuro_custom_gallery_post_format' ); 
+add_filter('response_post_formats_gallery_content', 'neuro_custom_gallery_post_format' ); 
 	
 /**
 * Set custom post excerpt link text based on theme option.
