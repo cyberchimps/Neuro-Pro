@@ -23,6 +23,9 @@
 
 <div class="container">
 	<div class="row">
+		<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
+	</div>
+	<div class="row">
 		<div class="wrap">
 	<!--Begin @Core post area-->
 		<?php response_index(); ?>
