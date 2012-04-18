@@ -1,0 +1,9 @@
+/* Green */
+
+a {color: #336600;}
+
+a:hover {color: #99cc66;}
+
+#imenu {
+	background: #336600; /* Old browsers */
+}

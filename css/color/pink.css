@@ -1,0 +1,9 @@
+/* Pink */
+
+a {color: #ff6699;}
+
+a:hover {color: #ff99cc;}
+
+#imenu {
+	background: #ff6699; /* Old browsers */
+}

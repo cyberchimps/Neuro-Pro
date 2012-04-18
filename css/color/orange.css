@@ -1,0 +1,9 @@
+/* Orange */
+
+a {color: #ff7b0d;}
+
+a:hover {color: #ffa84c;}
+
+#imenu {
+	background: #ff7b0d; /* Old browsers */
+}
