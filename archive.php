@@ -22,13 +22,12 @@
 ?>
 
 <div class="container">
-
-	
 	<div class="row">
-	
+		<?php if ($options->get($themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
+	</div>
+	<div class="row">
 		<div class="wrap">
-		
-		<div class="row">
+			<div class="row">
 	
 	<!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
@@ -82,8 +81,8 @@
 		<?php response_after_content_sidebar(); ?>
 		<!--End @response after content sidebar hook-->
 	
-			</div>
-			</div><!--end content-->
+				</div><!--end content-->
+			</div><!--end row-->
 		</div><!--end wrap-->
 	</div><!--end row-->
 </div><!--end container-->
