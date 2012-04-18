@@ -53,7 +53,6 @@ function neuro_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support('automatic-feed-links');
 	add_editor_style();
-	add_custom_background();
 }
 add_action( 'after_setup_theme', 'neuro_theme_setup' );
 
