@@ -4,8 +4,12 @@ a {color: #888;}
 
 a:hover {color: #ccc;}
 
+#fullnav #fullnav_menu > li > a {
+	color: #222;
+}
+
 #fullnav #fullnav_menu > li:hover > a {
-	color: #ccc;
+	color: #666;
 }
 
 #fullnav {
