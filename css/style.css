@@ -524,7 +524,7 @@ a:hover {color: #0085CF;}
 	border-radius: 14px;
 }
 
-#comments {text-align:left;padding-top: 3px;font-size: 12px;}
+#comments {text-align:left;padding-top: 3px;font-size: 12px; clear:both;}
 
 #share {text-align:left;float:left;padding-top: 3px;}
 
