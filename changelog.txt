@@ -7,7 +7,6 @@ Version 2.0.1 (04-30-11)
 -Added Pinterest social icon. 
 -CSS fix for fallback menu. 
 
-
 Version 2.0 (04-17-11)
 -Moved to CyberChimps Response Core Framework. 
 
