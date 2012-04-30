@@ -28,6 +28,9 @@ body {background: #fff;}
 #sidebar_left.four.columns {margin-right: 1.6%; width: 30.6%;}
 #content.eight.columns {width: 65.9%; margin-left: 0%;}
 
+#register.five.columns {width: 41%; margin-left: 2.6%;}
+
+
 
 @-moz-document url-prefix() {
 
@@ -214,7 +217,7 @@ color:#fff;
     display: none;
 	background-color: #FFF;
     border: 1px solid #E6E6E6;
-    margin: 20px 0 0;
+    margin: 10px 0 0;
     padding: 8px 0 0;
     position: absolute;
     left: 0;
