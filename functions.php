@@ -1,26 +1,48 @@
 <?php
-/*
-	Functions
-	Author: Tyler Cunningham
-	Establishes the core theme functions.
-	Copyright (C) 2011 CyberChimps
-	Version 3.0
+/**
+* Theme functions used by Neuro.
+*
+* Authors: Tyler Cunningham
+* Copyright: © 2012
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: /licensing/
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package Neuro.
+* @since 2.0
 */
 
 /**
 * Define global theme functions.
 */ 
-	$themename = 'response';
-	$themenamefull = 'Response Pro';
-	$themeslug = 're';
-	$pagedocs = 'http://cyberchimps.com/question/using-the-response-pro-page-options/';
-	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-feature-slider-in-response-pro/';
-	$root = get_template_directory_uri(); 
+	$themename = 'neuro';
+	$themenamefull = 'Neuro Pro';
+	$themeslug = 'ne';
+	$pagedocs = 'http://cyberchimps.com/question/using-the-neuro-pro-page-options/';
+	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-feature-slider-in-neuro-pro/';
+	$root = get_template_directory_uri(); 	
 	
+/**
+* Assign new default font.
+*/ 
+function neuro_default_font( $font ) {
+	$font = 'Helvetica';
+	return $font;
+}
+add_filter( 'response_default_font', 'neuro_default_font' );
+
+function neuro_remove_credit() {
+	remove_action ( 'response_secondary_footer', 'response_secondary_footer_credit' );
+}
+add_action( 'init', 'neuro_remove_credit' );
+
 /**
 * Basic theme setup.
 */ 
-function response_theme_setup() {
+function neuro_theme_setup() {
 	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
 	
 	add_theme_support(
@@ -31,31 +53,30 @@ function response_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support('automatic-feed-links');
 	add_editor_style();
-	add_custom_background();
 }
-add_action( 'after_setup_theme', 'response_theme_setup' );
+add_action( 'after_setup_theme', 'neuro_theme_setup' );
 
 /**
 * Redirect user to theme options page after activation.
 */ 
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
-	wp_redirect( 'themes.php?page=response' );
+	wp_redirect( 'themes.php?page=neuro' );
 }
 
 /**
 * Add link to theme options in Admin bar.
 */ 
-function response_admin_link() {
+function neuro_admin_link() {
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'Response', 'title' => 'Response Pro Options', 'href' => admin_url('themes.php?page=response')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'neuro', 'title' => 'Neuro Pro Options', 'href' => admin_url('themes.php?page=neuro')  ) ); 
 }
-add_action( 'admin_bar_menu', 'response_admin_link', 113 );
+add_action( 'admin_bar_menu', 'neuro_admin_link', 113 );
 
 /**
 * Custom markup for gallery posts in main blog index.
 */ 
-function response_custom_gallery_post_format( $content ) {
+function neuro_custom_gallery_post_format( $content ) {
 	global $options, $themeslug, $post;
 	$root = get_template_directory_uri(); 
 	
@@ -107,12 +128,12 @@ function response_custom_gallery_post_format( $content ) {
 	
 	return $content;
 }
-add_filter('response_post_formats_gallery_content', 'response_custom_gallery_post_format' ); 
+add_filter('response_post_formats_gallery_content', 'neuro_custom_gallery_post_format' ); 
 	
 /**
 * Set custom post excerpt link text based on theme option.
 */ 
-function response_excerpt_link($more) {
+function neuro_excerpt_link($more) {
 
 	global $themename, $themeslug, $options, $post;
     
@@ -125,12 +146,12 @@ function response_excerpt_link($more) {
 
 	return '<a href="'. get_permalink($post->ID) . '"> <br /><br /> '.$linktext.'</a>';
 }
-add_filter('excerpt_more', 'response_excerpt_link');
+add_filter('excerpt_more', 'neuro_excerpt_link');
 
 /**
 * Set custom post excerpt length based on theme option.
 */ 
-function response_excerpt_length($length) {
+function neuro_excerpt_length($length) {
 
 	global $themename, $themeslug, $options;
 	
@@ -143,12 +164,12 @@ function response_excerpt_length($length) {
     	
 	return $length;
 }
-add_filter('excerpt_length', 'response_excerpt_length');
+add_filter('excerpt_length', 'neuro_excerpt_length');
 
 /**
 * Custom featured image size based on theme options.
 */ 
-function response_featured_image() {	
+function neuro_featured_image() {	
 	if ( function_exists( 'add_theme_support' ) ) {
 	
 	global $themename, $themeslug, $options;
@@ -168,12 +189,12 @@ function response_featured_image() {
 	set_post_thumbnail_size( $featurewidth, $featureheight, true );
 	}	
 }
-add_action( 'init', 'response_featured_image', 11);	
+add_action( 'init', 'neuro_featured_image', 11);	
 
 /**
 * Attach CSS3PIE behavior to elements
 */   
-function response_pie() { ?>
+function neuro_pie() { ?>
 	
 	<style type="text/css" media="screen">
 		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section, #carousel_list, #calloutwrap, #calloutbutton, .box1, .box2, .box3, .es-carousel-wrapper
@@ -185,12 +206,12 @@ function response_pie() { ?>
 <?php
 }
 
-add_action('wp_head', 'response_pie', 8);
+add_action('wp_head', 'neuro_pie', 8);
 
 /**
 * Custom post types for Slider, Carousel.
 */ 
-function response_create_post_type() {
+function neuro_create_post_type() {
 
 	global $themename, $themeslug, $options, $root;
 	
@@ -226,12 +247,12 @@ function response_create_post_type() {
 		)
 	);
 }
-add_action( 'init', 'response_create_post_type' );
+add_action( 'init', 'neuro_create_post_type' );
 
 /**
 * Custom taxonomies for Slider, Carousel.
 */ 
-function response_custom_taxonomies() {
+function neuro_custom_taxonomies() {
 
 	global $themename, $themeslug, $options;
 	
@@ -256,12 +277,12 @@ function response_custom_taxonomies() {
 		)
 	);
 }
-add_action('init', 'response_custom_taxonomies', 0);
+add_action('init', 'neuro_custom_taxonomies', 0);
 
 /**
 * Assign default category for Slider, Carousel posts.
 */ 
-function response_custom_taxonomy_default( $post_id, $post ) {
+function neuro_custom_taxonomy_default( $post_id, $post ) {
 
 	global $themename, $themeslug, $options;	
 
@@ -288,12 +309,59 @@ function response_custom_taxonomy_default( $post_id, $post ) {
 	}
 }
 
-add_action( 'save_post', 'response_custom_taxonomy_default', 100, 2 );
+add_action( 'save_post', 'neuro_custom_taxonomy_default', 100, 2 );
+
+/**
+* Edit columns for slider post type.
+*/ 
+add_filter('manage_edit-ne_custom_slides_columns', 'slider_edit_columns');
+add_action('manage_ne_custom_slides_posts_custom_column',  'slides_columns_display', 10, 2);
+
+function slider_edit_columns($portfolio_columns){
+    $portfolio_columns = array(
+        "cb" => "<input type=\"checkbox\" />",
+        "title" => _x('Title', 'column name'),
+        "image" => __('Image'),
+        "category" => __('Categories'),
+        "author" => __('Author'),
+        "date" => __('Date'),
+    );
+   
+    return $portfolio_columns;
+}
+function slides_columns_display($portfolio_columns, $post_id){
+	global $post;
+	$cat = get_the_terms($post->ID, 'slide_categories');
+	$images = get_post_meta($post->ID, 'slider_image' , true);
+	
+    switch ($portfolio_columns)
+    {
+        case "image":
+        	if ( !empty( $images ) ) {
+        		echo '<img src="';
+        		echo $images;
+        		echo '"style="height: 50px; width: 50px;">';
+        	}
+        break;
+        
+        case "category":
+        	if ( !empty( $cat ) ) {
+                $out = array();
+                foreach ( $cat as $c )
+                    $out[] = "<a href='edit.php?slide_categories=$c->slug'> " . esc_html(sanitize_term_field('name', $c->name, $c->term_id, 'slide_categories', 'display')) . "</a>";
+                echo join( ', ', $out );
+            } else {
+                _e('No Category.');  //No Taxonomy term defined
+            }
+        break;
+	}
+}
+
 
 /**
 * Add TypeKit support based on theme option.
 */ 
-function response_typekit_support() {
+function neuro_typekit_support() {
 	global $themename, $themeslug, $options;
 	
 	$embed = $options->get($themeslug.'_typekit');
@@ -301,55 +369,66 @@ function response_typekit_support() {
 	echo stripslashes($embed);
 
 }
-add_action('wp_head', 'response_typekit_support');
+add_action('wp_head', 'neuro_typekit_support');
 
 /**
 * Add Google Analytics support based on theme option.
 */ 
-function response_google_analytics() {
+function neuro_google_analytics() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_ga_code'));
 
 }
-add_action('wp_head', 'response_google_analytics');
+add_action('wp_head', 'neuro_google_analytics');
 
 /**
 * Add custom header scripts support based on theme option.
 */ 
-function response_custom_scripts() {
+function neuro_custom_scripts() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_custom_header_scripts'));
 
 }
-add_action('wp_head', 'response_custom_scripts');
+add_action('wp_head', 'neuro_custom_scripts');
 
 	
 /**
 * Register custom menus for header, footer.
 */ 
-function response_register_menus() {
+function neuro_register_menus() {
 	register_nav_menus(
 	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ), 'sub-menu' => __( 'Sub Menu' ))
   );
 }
-add_action( 'init', 'response_register_menus' );
+add_action( 'init', 'neuro_register_menus' );
 	
 /**
 * Menu fallback if custom menu not used.
 */ 
-function response_menu_fallback() {
+function neuro_full_menu_fallback() {
 	global $post; ?>
 	
-	<ul id="nav_menu">
+	<ul id="fullnav_menu">
+		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
+	</ul><?php
+}
+
+/**
+* Menu fallback if custom menu not used.
+*/ 
+function neuro_half_menu_fallback() {
+	global $post; ?>
+	
+	<ul id="halfnav_menu">
 		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
 	</ul><?php
 }
 /**
 * Register widgets.
 */ 
-function response_widgets_init() {
+function neuro_widgets_init() {
     register_sidebar(array(
     	'name' => 'Full Sidebar',
     	'id'   => 'sidebar-widgets',
@@ -415,10 +494,10 @@ function response_widgets_init() {
 		'after_title' => '</h3>',
 	));
 }
-add_action ('widgets_init', 'response_widgets_init');
+add_action ('widgets_init', 'neuro_widgets_init');
 
 /**
-* Initialize response Core Framework and Pro Extension.
+* Initialize neuro Core Framework and Pro Extension.
 */ 
 require_once ( get_template_directory() . '/core/core-init.php' );
 require_once ( get_template_directory() . '/core/pro/pro-init.php' );
@@ -434,15 +513,15 @@ require_once ( get_template_directory() . '/includes/update.php' ); // Notify us
 // Presstrends
 function presstrends() {
 
-// Add your PressTrends and Theme API Keys
+// PressTrends Account API Key
 $api_key = 'zwhgyc1lnt56hki8cpwobb47bblas4er226b';
-$auth = 'ulc38mkshvmycifb7lzmvsz6354gi18zg';
 
-// NO NEED TO EDIT BELOW
+// Start of Metrics
+global $wpdb;
 $data = get_transient( 'presstrends_data' );
 if (!$data || $data == ''){
-$api_base = 'http://api.presstrends.io/index.php/api/sites/add/auth/';
-$url = $api_base . $auth . '/api/' . $api_key . '/';
+$api_base = 'http://api.presstrends.io/index.php/api/sites/update/api/';
+$url = $api_base . $api_key . '/';
 $data = array();
 $count_posts = wp_count_posts();
 $count_pages = wp_count_posts('page');
@@ -452,14 +531,18 @@ $plugin_count = count(get_option('active_plugins'));
 $all_plugins = get_plugins();
 foreach($all_plugins as $plugin_file => $plugin_data) {
 $plugin_name .= $plugin_data['Name'];
-$plugin_name .= '&';
-}
+$plugin_name .= '&';}
+$posts_with_comments = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type='post' AND comment_count > 0");
+$comments_to_posts = number_format(($posts_with_comments / $count_posts->publish) * 100, 0, '.', '');
+$pingback_result = $wpdb->get_var('SELECT COUNT(comment_ID) FROM '.$wpdb->comments.' WHERE comment_type = "pingback"');
 $data['url'] = stripslashes(str_replace(array('http://', '/', ':' ), '', site_url()));
 $data['posts'] = $count_posts->publish;
 $data['pages'] = $count_pages->publish;
 $data['comments'] = $comments_count->total_comments;
 $data['approved'] = $comments_count->approved;
 $data['spam'] = $comments_count->spam;
+$data['pingbacks'] = $pingback_result;
+$data['post_conversion'] = $comments_to_posts;
 $data['theme_version'] = $theme_data['Version'];
 $data['theme_name'] = $theme_data['Name'];
 $data['site_name'] = str_replace( ' ', '', get_bloginfo( 'name' ));
@@ -467,13 +550,13 @@ $data['plugins'] = $plugin_count;
 $data['plugin'] = urlencode($plugin_name);
 $data['wpversion'] = get_bloginfo('version');
 foreach ( $data as $k => $v ) {
-$url .= $k . '/' . $v . '/';
-}
+$url .= $k . '/' . $v . '/';}
 $response = wp_remote_get( $url );
-set_transient('presstrends_data', $data, 60*60*24);
-}}
-add_action('admin_init', 'presstrends');
+set_transient('presstrends_data', $data, 60*60*24);}
+}
 
+// PressTrends WordPress Action
+add_action('admin_init', 'presstrends');
 /**
 * End
 */

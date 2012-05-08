@@ -1,9 +1,9 @@
 <?php
 /**
-* Initializes the response Pro Theme Options
+* Initializes the Neuro Theme Options
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: © 2012
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package response Pro
-* @since 3.0
+* @package Neuro.
+* @since 2.0
 */
 
 require( get_template_directory() . '/core/classy-options/classy-options-framework/classy-options-framework.php');
@@ -59,30 +59,43 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 $options
 	->section("Welcome")
-		->info("<h1>Response Pro</h1>
+		->info("<h1>Neuro Pro</h1>
 		
-<p><strong>A Responsive Starter WordPress Theme</strong></p>
+<p><strong>A Responsive Blog WordPress Theme with Drag and Drop Theme Options</strong></p>
 
-<p>Response Pro includes a Responsive Design (which magically adjusts to mobile devices such as the iPhone and iPad), Responsive Slider, Drag & Drop Header Elements, Page and Blog Elements, simplified Theme Options, and is built with HTML5 and CSS3.</p>
+<p>Neuro Pro includes a Responsive Design (which magically adjusts to mobile devices such as the iPhone and iPad), Responsive Slider, Drag & Drop Header Elements, Page and Blog Elements, simplified Theme Options, and is built with HTML5 and CSS3.</p>
 
 <p>To get started simply work your way through the options below, add your content, and always remember to hit save after making any changes.</p>
 
-<p>The Response Pro Slider options are under the Response Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the response Pro Page Options as well.</p>
+<p>The Neuro Pro Slider options are under the Neuro Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the response Pro Page Options as well.</p>
 
-<p>If you are using the Response Pro Slider on a Page you can upload, and edit your slides from the Feature Slides menu available in the WP-Admin menu. Look for the CyberChimps logo.</p>
+<p>If you are using the Neuro Pro Slider on a Page you can upload, and edit your slides from the Feature Slides menu available in the WP-Admin menu. Look for the CyberChimps logo.</p>
 
-<p>We tried to make Response Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/responsepro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
+<p>We tried to make Neuro Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/neuropro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
 
-<p>Thank you for using Response Pro.</p>
+<p>Thank you for using Neuro Pro.</p>
 ")
 	->section("Design")
+		->open_outersection()
+			->select($themeslug."_color_scheme", "Select a Skin Color", array( 'options' => array("black" => "Black (default)", "blue" => "Blue", "darkblue" => "Dark Blue", "green" => "Green", "grey" => "Grey", "orange" => "Orange", "pink" => "Pink", "red" => "Red", "white" => "White"), 'default' => 'black'))
+		->close_outersection()
 		->subsection("Typography")
-			->select($themeslug."_font", "Choose a Font", array( 'options' => array("Arial" => "Arial (default)", "Courier New" => "Courier New", "Georgia" => "Georgia", "Helvetica" => "Helvetica", "Lucida Grande" => "Lucida Grande", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Actor" => "Actor", "Coda" => "Coda", "Maven+Pro" => "Maven Pro", "Metrophobic" => "Metrophobic", "News+Cycle" => "News Cycle", "Nobile" => "Nobile", "Tenor+Sans" => "Tenor Sans", "Quicksand" => "Quicksand", "Ubuntu" => "Ubuntu", 'custom' => "Custom")))
+			->select($themeslug."_font", "Choose a Font", array( 'options' => array("Helvetica" => "Helvetica (default)", "Arial" => "Arial", "Courier New" => "Courier New", "Georgia" => "Georgia", "Lucida Grande" => "Lucida Grande", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Actor" => "Actor", "Coda" => "Coda", "Maven+Pro" => "Maven Pro", "Metrophobic" => "Metrophobic", "News+Cycle" => "News Cycle", "Nobile" => "Nobile", "Tenor+Sans" => "Tenor Sans", "Quicksand" => "Quicksand", "Ubuntu" => "Ubuntu", 'custom' => "Custom")))
 			->text($themeslug."_custom_font", "Enter a Custom Font")
 						->textarea($themeslug."_typekit", "TypeKit Code")
 		->subsection_end()
+		->subsection("Background")
+			->images($themeslug."_background_image", "Select a background", array( 'options' => array(  'blue' => TEMPLATE_URL . '/images/backgrounds/thumbs/blue.jpg', 'wood' => TEMPLATE_URL . '/images/backgrounds/thumbs/wood.jpg', 'neuro' => TEMPLATE_URL . '/images/backgrounds/thumbs/neurobg.png','space' => TEMPLATE_URL . '/images/backgrounds/thumbs/neuros.jpg', 'grey' => TEMPLATE_URL . '/images/backgrounds/thumbs/grey.png', 'pink' => TEMPLATE_URL . '/images/backgrounds/thumbs/pink.jpg' ), 'default' => 'wood'))
+			->checkbox($themeslug."_custom_background", "Use a custom background")
+			->color($themeslug."_background_color", "Custom Background Color")
+			->upload($themeslug."_background_upload", "Background Image")
+			->radio($themeslug."_bg_image_position", "Image Position", array( 'options' => array("top left" => "Left", "top center" => "Center", "top right" => "Right")))
+			->radio($themeslug."_bg_image_repeat", "Image Repeat", array( 'options' => array( "repeat" => "Tile", "repeat-x" => "Tile Horizontally", "repeat-y" => "Tile Vertically", "no-repeat" => "No Tile")))
+			->radio($themeslug."_bg_image_attachment", "Image Attachment", array( 'options' => array("scroll" => "Scroll", "fixed" => "Fixed")))
+		->subsection_end()
+
 		->subsection("Layout")
-			->text($themeslug."_row_max_width", "Row Max Width", array('default' => '1020px'))
+			->text($themeslug."_row_max_width", "Row Max Width", array('default' => '980px'))
 		->subsection_end()
 		->subsection("Custom Colors")
 			->color($themeslug."_text_color", "Text Color")
@@ -97,14 +110,17 @@ $options
 			->close_outersection()
 	->section("Header")
 		->open_outersection()
-			->section_order("header_section_order", "Drag & Drop Header Elements", array('options' => array("response_logo_icons" => "Logo + Icons", "response_sitename_contact" => "Logo + Contact", "response_description_icons" => "Description + Icons", "response_logo_menu" => "Logo + Menu", "response_logo_Description" => "Logo + Description", "response_banner" => "Banner", "response_custom_header_element" => "Custom", "response_navigation" => "Menu", "response_logo_register" => "Logo + Login"), 'default' => 'response_logo_icons,response_navigation'))
+			->section_order("header_section_order", "Drag & Drop Header Elements", array('options' => array("response_logo_icons" => "Logo + Icons", "response_sitename_contact" => "Logo + Contact", "response_description_icons" => "Description + Icons", "response_logo_menu" => "Logo + Menu", "response_logo_Description" => "Logo + Description", "response_banner" => "Banner", "response_custom_header_element" => "Custom", "response_logo_register" => "Logo + Login"), 'default' => 'response_logo_icons'))
 			->upload($themeslug."_banner", "Banner Image")
 			->textarea($themeslug."_header_contact", "Contact Information")
 			->textarea($themeslug."_custom_header_element", "Custom HTML")
 		->close_outersection()
 			->subsection("Header Options")
+			->checkbox($themeslug."_subheader", "Subheader")
+			->checkbox($themeslug."_header_wrap", "Header Wrap")
+			->checkbox($themeslug."_full_menu", "Full Width Menu" , array('default' => true))
 			->checkbox($themeslug."_custom_logo", "Custom Logo" , array('default' => true))
-			->upload($themeslug."_logo", "Logo", array('default' => array('url' => TEMPLATE_URL . '/images/responselogo.png')))
+			->upload($themeslug."_logo", "Logo", array('default' => array('url' => TEMPLATE_URL . '/images/neuropro.png')))
 			->upload($themeslug."_favicon", "Custom Favicon")
 		->subsection_end()
 		->subsection("Social")
@@ -120,6 +136,8 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->checkbox($themeslug."_hide_flickr", "Hide Flickr Icon")
 			->text($themeslug."_linkedin", "LinkedIn Icon URL", array('default' => 'http://linkedin.com'))
 			->checkbox($themeslug."_hide_linkedin", "Hide LinkedIn Icon")
+			->text($themeslug."_pinterest", "Pinterest Icon URL", array('default' => 'http://pinterest.com'))
+			->checkbox($themeslug."_hide_pinterest", "Hide Pinterest Icon")
 			->text($themeslug."_youtube", "YouTube Icon URL", array('default' => 'http://youtube.com'))
 			->checkbox($themeslug."_hide_youtube", "Hide YouTube Icon")
 			->text($themeslug."_googlemaps", "Google Maps Icon URL", array('default' => 'http://maps.google.com'))
@@ -170,7 +188,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 		->subsection_end()
 		->subsection("Twtterbar Options")
 			->text($themeslug."_blog_twitter", "Enter your Twitter handle")
-			->info('Requires the <a href="http://wordpress.org/extend/plugins/twitter-for-wordpress/" target="_blank">Twitter for WordPress</a> plugin')
+			->checkbox($themeslug."_blog_twitter_reply", "Show @ Replies")
 		->subsection_end()
 		->subsection("Carousel Options")
 			->select($themeslug.'_carousel_category', 'Select the carousel category', array( 'options' => $customcarousel ))

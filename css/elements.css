@@ -1,6 +1,14 @@
+.subheader_icons img {height: 16px;}
+
+.subheader_icons { margin-top: 5px;}
+
+#subheader .description {margin-top: 8px;  color: white; font-size: 12px;}
+
+#subheader {margin-bottom: 20px;}
+
 /* Page Elements */
 
-#orbitDemo {border: 1px solid #ccc;}
+#orbitDemo {border: 1px solid #f1f2f3;}
 
 /*============================*/
 /*===== Carousel Styles ======*/
@@ -8,10 +16,10 @@
 /* Elastislide Style */
 .es-carousel-wrapper{
 	background: #fff;
-	border: 1px solid #DDD;
 	padding:10px 37px;
 	position:relative;
 	margin-bottom: 15px;
+	border-bottom: 1px solid #f1f2f3;
 }
 .es-carousel{
 	overflow:hidden;
@@ -63,10 +71,10 @@
 
 #twitterbar {
 	background: #fff;
-	border: 1px solid #DDD;
 	overflow: hidden;
 	margin: auto;
 	margin-bottom: 15px;
+	border-bottom: 1px solid #f1f2f3;
 }
 
 #twittertext {
@@ -85,7 +93,7 @@
 	margin: auto;
 	margin-bottom: 15px;
 	background: #fff;
-	border: 1px solid #DDD;
+	border-bottom: 1px solid #f1f2f3;
 }
 
 #callout_text {
@@ -132,6 +140,10 @@
 /*====== Widgitized Boxes =====*/
 /*============================*/
 
+#boxwrap {
+	border-bottom: 1px solid #f1f2f3;
+}
+
 #box_container ul {
 	list-style: none;
 }
@@ -145,28 +157,25 @@
 }
 
 #box1 {
-	min-height: 200px;
+	min-height: 150px;
 	background: #fff;
-	border: 1px solid #ddd;
 	margin-bottom: 15px;
 }
 
 #box2 {
-	min-height: 200px;
+	min-height: 150px;
 	background: #fff;
-	border: 1px solid #ddd;
 	margin-bottom: 15px;
 }
 
 #box3 {
-	min-height: 200px;
+	min-height: 150px;
 	background: #fff;
-	border: 1px solid #ddd;
 	right: -1px;
 	margin-bottom: 15px;
 }
 
-#box2.four.columns{margin-left: 4.3%;}
+#box2.four.columns{margin-left: 3.3%;}
 
 @-moz-document url-prefix() {
 #box2.four.columns, #box3.four.columns {margin-left: 4.1%;}

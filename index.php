@@ -1,6 +1,6 @@
 <?php
 /**
-* Index template used by the CyberChimps Response Core Framework
+* Index template used by Neuro.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Response
-* @since 1.0
+* @package Neuro
+* @since 2.0
 */
 
 	global $options, $themeslug, $post; // call globals
@@ -22,6 +22,8 @@
 <?php get_header(); ?>
 
 <div class="container">
+	<div class="row">
+		<div class="wrap">
 		<?php
 			foreach(explode(",", $options->get($themeslug.'_blog_section_order')) as $fn) {
 				if(function_exists($fn)) {
@@ -29,5 +31,7 @@
 				}
 			}
 		?>
+		</div>
+	</div>
 </div><!--end container-->
 <?php get_footer(); ?>

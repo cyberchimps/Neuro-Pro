@@ -1,6 +1,6 @@
 <?php 
 /**
-* Single template used by the CyberChimps Response Core Framework
+* Single template used by Neuro.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Response
-* @since 1.0
+* @package Neuro.
+* @since 2.0
 */
 
 	global $options, $themeslug, $post, $sidebar, $content_grid; // call globals
@@ -23,12 +23,14 @@
 
 <div class="container">
 	<div class="row">
-		<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
-	</div>
-	<div class="row">
+		<div class="wrap">
+			<div class="row">
+			<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
+			</div>
 	<!--Begin @Core post area-->
 		<?php response_index(); ?>
 	<!--End @Core post area-->
+		</div>
 	</div>
 </div><!--end container-->
 

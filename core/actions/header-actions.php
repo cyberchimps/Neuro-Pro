@@ -84,7 +84,7 @@ function response_meta_tags() { ?>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta name="distribution" content="global" />
 <meta name="language" content="en" /> 
-<meta name="viewport" content="initial-scale=1.6; maximum-scale=1.0; width=device-width; "/><?php
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width"/><?php
 }
 
 /**
@@ -165,7 +165,7 @@ global $themeslug, $options; //Call global variables
 		$font = $options->get($themeslug.'_font'); 
 	} 
 	if ($options->get($themeslug.'_color_scheme') == '') {
-		$color = 'blue';
+		$color = 'black';
 	}
 	else {
 		$color = $options->get($themeslug.'_color_scheme');
@@ -237,8 +237,8 @@ function response_header_social_icons_content() {
 	$hidegplus      = $options->get($themeslug.'_hide_gplus_icon');
 	$flickr		    = $options->get($themeslug.'_flickr');
 	$hideflickr     = $options->get($themeslug.'_hide_flickr');
-	$myspace	    = $options->get($themeslug.'_myspace');
-	$hidemyspace    = $options->get($themeslug.'_hide_myspace');
+	$pinterest		= $options->get($themeslug.'_pinterest');
+	$hidepinterest	= $options->get($themeslug.'_hide_pinterest');
 	$linkedin		= $options->get($themeslug.'_linkedin');
 	$hidelinkedin   = $options->get($themeslug.'_hide_linkedin');
 	$youtube		= $options->get($themeslug.'_youtube');
@@ -286,6 +286,12 @@ function response_header_social_icons_content() {
 		<?php if ($hideflickr == '1' AND $flickr == '' ):?>
 			<a href="https://flickr.com" target="_blank" rel="me"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/flickr.png" alt="Flickr" /></a>
 		<?php endif;?>
+		<?php if ($hidepinterest == '1' AND $pinterest != '' ):?>
+			<a href="<?php echo $pinterest ?>" target="_blank" rel="me"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/pinterest.png" alt="Pinterest" /></a>
+		<?php endif;?>
+		<?php if ($hidepinterest == '1' AND $pinterest == '' ):?>
+			<a href="https://pinterest.com" target="_blank" rel="me"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/pinterest.png" alt="Pinterest" /></a>
+		<?php endif;?>
 		<?php if ($hidelinkedin == '1' AND $linkedin != '' ):?>
 			<a href="<?php echo $linkedin ?>" target="_blank" rel="me"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/linkedin.png" alt="LinkedIn" /></a>
 		<?php endif;?>
@@ -321,7 +327,6 @@ function response_header_social_icons_content() {
 		
 	</div><!--end social--> <?php
 }
-
 /**
 * Navigation
 *
@@ -335,13 +340,13 @@ function response_nav() {
 	<div class="container">
 		<div class="row">
 
-			<div class="twelve columns" id="menu">
+			<div class="twelve columns" id="fullmenu">
 
-			<div id="nav" class="twelve columns">
+			<div id="fullnav" class="twelve columns">
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
-		    'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
-		    'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
+		    'fallback_cb' => 'neuro_full_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
+		    'items_wrap'      => '<ul id="fullnav_menu">%3$s</ul>',
 			    )
 			);
 	    	?>

@@ -52,6 +52,7 @@ function response_scripts() {
 	wp_register_script( 'modernizr' ,$path.'/js/foundation/modernizr.foundation.js');
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
 	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
+	wp_register_script( 'video' ,$path.'/js/video.js');
 	
 	wp_enqueue_script ('orbit');
 	wp_enqueue_script ('apps');
@@ -61,6 +62,7 @@ function response_scripts() {
 	wp_enqueue_script ('modernizr');
 	wp_enqueue_script ('menu');
 	wp_enqueue_script ('mobilemenu');
+	
 }
 add_action('wp_enqueue_scripts', 'response_scripts');	
 
@@ -135,6 +137,11 @@ function response_comment($comment, $args, $depth) {
 *
 * @since 1.0
 */
+/**
+* Breadcrumbs function
+*
+* @since 1.0
+*/
 function response_breadcrumbs() {
   global $root;
   
@@ -143,7 +150,7 @@ function response_breadcrumbs() {
   $before = '<span class="current">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb
  
-  if ( !is_home() && !is_front_page() && is_attachment() || is_paged() ) {
+  if ( !is_home() && !is_front_page() && !is_attachment() || is_paged() ) {
  
     echo '<div class="row"><div id="crumbs" class="twelve columns"><div class="crumbs_text">';
  

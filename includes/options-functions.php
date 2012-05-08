@@ -1,6 +1,6 @@
 <?php
 /**
-* Functions related to the Response Theme Options.
+* Functions related to the Neuro Theme Options.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,13 +11,108 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Response
-* @since 1.0
+* @package Neuro
+* @since 2.0
 */
+
+/* Backgound Option*/
+
+function background_option() {
+
+	global $options, $themeslug;
+	$root = get_template_directory_uri();
+	$customsource = $options->get($themeslug.'_background_upload');
+	$custom = stripslashes($customsource['url']);
+	$repeat = $options->get($themeslug.'_bg_image_repeat');
+	$position = $options->get($themeslug.'_bg_image_position');
+	$attachment = $options->get($themeslug.'_bg_image_attachment');
+	$color = $options->get($themeslug.'_background_color');
+	
+	if ($options->get($themeslug.'_background_image') == "" OR $options->get($themeslug.'_background_image') == "wood" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/wood.jpg'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image') == "grey" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/grey.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image') == "neuro" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/neurobg.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image')  == "blue" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/blue.jpg'); background-repeat: repeat; background-position: top center; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image') == "pink" && $options->get($themeslug.'_custom_background') != "1")   {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/pink.png'); background-color: #000; background-repeat-x: repeat-x; background-position: top center; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_background_image') == "space" && $options->get($themeslug.'_custom_background') != "1")  {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$root/images/backgrounds/neuros.jpg'); background-color: #000; background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
+		echo '</style>';
+	}
+	
+	if ($options->get($themeslug.'_custom_background') == "1") {
+	
+		echo '<style type="text/css">';
+		echo "body {background-image: url('$custom'); background-color: $color; background-repeat: $repeat; background-position: $position; background-attachment: $attachment;}";
+		echo '</style>';
+	
+	}
+	
+}
+add_action( 'wp_head', 'background_option');
+
+/* Header Wrap Option*/
+function neuro_header_wrap() {
+	global $options, $themeslug;
+	$enable = $options->get($themeslug.'_header_wrap');
+	
+	if ($enable == '1') {
+		echo "<style type='text/css'>";
+		echo "#fullmenu {border-radius: 0px 0px 0px 0px;}";
+		echo "#header_wrap {border-radius: 6px 6px 0px 0px;background-color: #F8F8F8;padding-top: 26px;padding-bottom: 20px;}";
+		echo "h1.sitename a {color: black; text-shadow: 1px 2px #fff;}";
+		echo "h1.sitename a:hover {color: #0085CF;}";
+		echo "</style>";
+	}
+}
+add_action( 'wp_head', 'neuro_header_wrap' );
+
+/* Full width nav options*/
+function neuro_full_nav() {
+	global $options, $themeslug;
+	$enable = $options->get($themeslug.'_full_menu');
+	
+	if ($enable == '1') {
+		echo "<style type='text/css'>";
+		echo ".wrap {border-radius: 0px 0px 0px 0px;}";
+		echo "</style>";
+	}
+}
+add_action( 'wp_head', 'neuro_full_nav' );
 
 /* Standard Web Layout*/
 
-function response_content_layout() {
+function neuro_content_layout() {
 	global $options, $themeslug, $post;
 	
 	if (is_single()) {
@@ -60,7 +155,7 @@ function response_content_layout() {
 	}
 
 }
-add_action( 'wp_head', 'response_content_Layout' );
+add_action( 'wp_head', 'neuro_content_Layout' );
 
 /* Widget Title Background*/
 
@@ -68,7 +163,7 @@ function custom_row_width() {
 	global $options, $themeslug;
 	$maxwidth = $options->get($themeslug.'_row_max_width');
 	
-	if ($maxwidth != '0' OR $maxwidth =='1020px' ) {
+	if ($maxwidth != '0' OR $maxwidth =='980px' ) {
 		echo '<style type="text/css">';
 		echo ".row {max-width: $maxwidth;}";
 		echo '</style>';

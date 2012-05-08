@@ -1,6 +1,6 @@
 <?php 
 /**
-* Footer template used by the CyberChimps Response Core Framework
+* Footer template used by Neuro.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Response
-* @since 1.0
+* @package Neuro.
+* @since 2.0
 */
 
 	global $options, $themeslug // call globals
@@ -30,6 +30,13 @@
 		<?php response_footer(); ?>
 	<!-- End @response footer hook content-->
 				</div>
+			<div class="row" >
+				<div id="credit" class="twelve columns">
+				<?php if ($options->get($themeslug.'_hide_link') == "1"): ?>
+					<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
+				<?php endif; ?>
+				</div>
+			</div>
 	<?php endif;?>
 	
 

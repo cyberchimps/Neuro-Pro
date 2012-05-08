@@ -24,6 +24,46 @@ add_action( 'response_description_icons', 'response_description_icons_content');
 add_action( 'response_logo_menu', 'response_logo_menu_content');
 add_action( 'response_logo_description', 'response_logo_description_content');
 
+add_action( 'response_subheader', 'response_subheader_content');
+
+/**
+* Description/Icons
+*
+* @since 1.0
+*/
+function response_subheader_content() {
+?>
+	<div id="subheader">
+		<div class="container">
+			<div class="row">
+		
+			<div class="five columns">
+				
+			<!-- Begin @Core header description hook -->
+				<?php response_header_site_description(); ?> 
+			<!-- End @Core header description hook -->
+			
+				
+			</div>	
+			
+			<div class="seven columns">
+				<div class="subheader_icons">
+			
+			<!-- Begin @Core header social icon hook -->
+				<?php response_header_social_icons(); ?> 
+			<!-- End @Core header contact social icon hook -->	
+						
+				</div>	
+			</div>
+			
+		</div><!--end row-->
+	</div>	
+</div>
+
+<?php
+}
+
+
 /**
 * Establishes the Pro theme font family.
 *
@@ -31,7 +71,7 @@ add_action( 'response_logo_description', 'response_logo_description_content');
 */
 function response_pro_font() {
 	global $themeslug, $options; //Call global variables
-	$family = apply_filters( 'response_default_font_family', 'Helvetica, sans-serif' );
+	$family = apply_filters( 'response_default_font_family', 'Arial, sans-serif' );
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
 		$font = apply_filters( 'response_default_font', 'Arial' );
@@ -109,8 +149,9 @@ function response_sitename_contact_content() {
 */
 function response_description_icons_content() {
 ?>
-	<div class="container">
-		<div class="row">
+
+		<div class="container">
+			<div class="row">
 		
 			<div class="five columns">
 				
@@ -127,9 +168,11 @@ function response_description_icons_content() {
 				<?php response_header_social_icons(); ?> 
 			<!-- End @Core header contact social icon hook -->	
 						
-			</div>	
+			</div>
+			
 		</div><!--end row-->
 	</div>	
+
 
 <?php
 }
@@ -153,9 +196,11 @@ function response_logo_menu_content() {
 			
 			</div>	
 			
-			<div class="seven columns">
+			<div class="seven columns" id="halfmenu">
 			<div id="halfnav">
 			<?php wp_nav_menu( array(
+		    'items_wrap'      => '<ul id="halfnav_menu">%3$s</ul>',
+			'fallback_cb' => 'neuro_half_menu_fallback',
 		    'theme_location' => 'sub-menu' // Setting up the location for the main-menu, Main Navigation.
 			    )
 			);
