@@ -2,7 +2,7 @@ Neuro Pro Changelog
 
 ****************************
 
-Version 2.0.4 (05-31-12)
+Version 2.0.4 (06-01-12)
 -Fix for icon posiitoning in Firefox.
 -Added Hindi language files.
 -Fix for slider custom captions.
