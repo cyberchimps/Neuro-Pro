@@ -16,6 +16,11 @@
 */
 
 /**
+* Response Twitterbar actions
+*/
+add_action( 'response_twitterbar_section', 'response_twitterbar_section_content' );
+
+/**
 * Retrieves the Twitterbar options
 */
 function response_twitterbar_section_content() {
@@ -93,3 +98,7 @@ function response_get_latest_tweets( $username, $show_replies = 0 ) {
 		return false;
 	endif;
 }
+/**
+* End
+*/
+?>
