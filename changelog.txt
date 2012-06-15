@@ -2,6 +2,12 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.0.5 (06-15-12)
+-Replaced wp_theme_data() (deprecated) with wp_get_theme().
+-Fixed Twitterbar timestamp issue and random "no tweets to display" message.
+-Tweaked breadcrumb code to fix random WP_Object error. 
+-Added Czech language files.
+
 Version 2.0.4 (06-01-12)
 -Fix for icon posiitoning in Firefox.
 -Added Hindi language files.
