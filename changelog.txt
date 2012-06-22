@@ -2,6 +2,9 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.0.6 (06-22-12)
+-3.4 Update API Fix.
+
 Version 2.0.5 (06-15-12)
 -Replaced wp_theme_data() (deprecated) with wp_get_theme().
 -Fixed Twitterbar timestamp issue and random "no tweets to display" message.
