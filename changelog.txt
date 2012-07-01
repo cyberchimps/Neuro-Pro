@@ -2,6 +2,11 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.0.7 (07-01-12)
+-Sticky Footer.
+-Sidebar fix.
+-Callout fix.
+
 Version 2.0.6 (06-22-12)
 -3.4 Update API Fix.
 
