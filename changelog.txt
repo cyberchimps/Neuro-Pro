@@ -2,8 +2,10 @@ Neuro Pro Changelog
 
 ****************************
 
-Version 2.0.7 (07-01-12)
--Sticky Footer.
+Version 2.0.7 (07-09-12)
+-Twitter embed fix.
+-Fixed gradient issue in IE8.
+-Sticky Footer.php fix.
 -Sidebar fix.
 -Callout fix.
 
