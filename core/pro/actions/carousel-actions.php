@@ -97,7 +97,7 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	    	$out .= "
 	    	
 				<li>
-	    			<a href='$link'>	
+	    			<a href='$image'>	
 	    				<img src='$image' alt='$title'/>
 	    			</a>
 	    			<div class='carousel_caption'>$title</div>
@@ -115,39 +115,47 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	      
 	      	$out .= "	
 	    	<ul>
-	      			<li>
-	      				
-	    				<img src='$default' alt='Post 1'/>
-	    				
-	    			</li>
-					<li>
-	    				<img src='$default' alt='Post 2' />
-	    			</li>
-					<li>
-	    				<img src='$default' alt='Post 3' />
-	    			</li>
-					<li>
-	    				<img src='$default' alt='Post 4' />
-	    			</li>
-					<li>
-	    				<img src='$default' alt='Post 5' />
-	    			</li>
-	    			
-	    			<li>
-	    				<img src='$default' alt='Post 6' />
-	    			</li>
-	    			
-	    			<li>
-	    				<img src='$default' alt='Post 6' />
-	    			</li>
-
-					<li>
-	    				<img src='$default' alt='Post 6' />
-	    			</li>
-		
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 1'/>
+					</a>
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 2' />
+					</a>
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 3' />
+					</a>
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 4' />
+					</a>	
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 5' />
+					</a>	
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 6' />
+					</a>	
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 7' />
+					</a>	
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 8' />
+					</a>	
+				</li>	
 	    	</ul>
-	    				
-	    				
 	    			";
      
 	endif; 	    
@@ -161,15 +169,27 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
     
     $out .= <<<OUT
 	<script type="text/javascript">
-			 jQuery(document).ready(function ($) {
+		jQuery(document).ready(function ($) {
 			$('#carousel').elastislide({
 				imageW 		: 125,
 				speed 		: $speed,
 				margin		: 12,
 				minItems 	: 5
 			});
-			});
+		});
 			
+		jQuery(document).ready(function ($) {
+			$(function() {
+				$('.es-carousel a').lightBox({
+					imageLoading:			'$root/images/portfolio/lightbox-ico-loading.gif',		
+					imageBtnPrev:			'$root/images/portfolio/lightbox-btn-prev.gif',			
+					imageBtnNext:			'$root/images/portfolio/lightbox-btn-next.gif',			
+					imageBtnClose:			'$root/images/portfolio/lightbox-btn-close.gif',		
+					imageBlank:				'$root/images/portfolio/lightbox-blank.gif',			
+				});
+			});
+		});
+		
 		</script>
 OUT;
 
