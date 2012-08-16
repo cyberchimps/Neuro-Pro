@@ -111,7 +111,7 @@ $options
 			->close_outersection()
 	->section("Header")
 		->open_outersection()
-			->section_order("header_section_order", "Drag & Drop Header Elements", array('options' => array("response_logo_icons" => "Logo + Icons", "response_sitename_contact" => "Logo + Contact", "response_description_icons" => "Description + Icons", "response_logo_menu" => "Logo + Menu", "response_logo_Description" => "Logo + Description", "response_banner" => "Banner", "response_custom_header_element" => "Custom", "response_logo_register" => "Logo + Login"), 'default' => 'response_logo_icons'))
+			->section_order("header_section_order", "Drag & Drop Header Elements", array('options' => array("response_logo_icons" => "Logo + Icons", "response_sitename_contact" => "Logo + Contact", "response_description_icons" => "Description + Icons", "response_logo_menu" => "Logo + SubMenu", "response_logo_Description" => "Logo + Description", "response_banner" => "Banner", "response_custom_header_element" => "Custom", "response_logo_register" => "Logo + Login"), 'default' => 'response_logo_icons'))
 			->upload($themeslug."_banner", "Banner Image")
 			->textarea($themeslug."_header_contact", "Contact Information")
 			->textarea($themeslug."_custom_header_element", "Custom HTML")
