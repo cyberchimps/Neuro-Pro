@@ -163,7 +163,7 @@ jQuery(function($) {
 	$("input[name='neuro[header_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
-			response_sitename_contact: "section-ne_header_contact",
+			response_logo_contact: "section-ne_header_contact",
 			response_custom_header_element: "section-ne_custom_header_element",
 			response_banner: "section-ne_banner"
 			// , response_box_section: ""
