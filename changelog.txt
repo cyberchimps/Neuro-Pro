@@ -2,6 +2,14 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.0.9 (08-21-12)
+-Added custom url to logo.
+-Fixed logo contact form not working in header.
+-Updated readme.txt.
+-Changed Logo + Menu to Submenu.
+-Fixed count_posts error.
+-Made meta tag language dynamic.
+
 Version 2.0.8 (08-13-12)
 -Chrome sidebar and decimal fix.
 -Lightbox carousel implemented.
