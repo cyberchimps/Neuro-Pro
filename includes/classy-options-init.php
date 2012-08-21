@@ -122,6 +122,7 @@ $options
 			->checkbox($themeslug."_full_menu", "Full Width Menu" , array('default' => true))
 			->checkbox($themeslug."_custom_logo", "Custom Logo" , array('default' => true))
 			->upload($themeslug."_logo", "Logo", array('default' => array('url' => TEMPLATE_URL . '/images/neuropro.png')))
+			->text($themeslug."_logo_url", "Logo Custom URL", array('default' => home_url()))
 			->upload($themeslug."_favicon", "Custom Favicon")
 			->upload($themeslug."_apple_touch", "Apple Touch Icon", array('default' => array('url' => TEMPLATE_URL . '/images/apple-icon.png')))
 		->subsection_end()
