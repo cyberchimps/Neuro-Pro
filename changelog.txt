@@ -2,6 +2,10 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.0.10 (09-04-12)
+-Fixed comments error.
+-Fixed responsive slider in IE and Firefox.
+
 Version 2.0.9 (08-21-12)
 -Added custom url to logo.
 -Fixed logo contact form not working in header.
