@@ -100,7 +100,6 @@ function initialize_the_meta_boxes() {
 					'std' => 'breadcrumbs,page_section'
 				))
 
-			->pagehelp('', 'Need Help?', '')
 		->tab($themenamefull." Slider Options")
 			->select('page_slider_type', 'Select Slider Type', '', array('options' => array('Custom Slides', 'Blog Posts')) )
 			->select('slider_category', 'Custom Slide Category', '', array('options' => $slideroptions) )
