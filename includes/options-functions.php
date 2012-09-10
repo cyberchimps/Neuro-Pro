@@ -71,6 +71,7 @@ function background_option() {
 	}
 	
 	if ($options->get($themeslug.'_custom_background') == "1") {
+		$color = (!empty($color)) ? $color : '#ffffff';
 		if(!empty($custom)) {
 			echo '<style type="text/css">';
 			echo "body {background-image: url('$custom'); background-color: $color; background-repeat: $repeat; background-position: $position; background-attachment: $attachment;}";
