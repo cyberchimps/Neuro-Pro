@@ -2,6 +2,14 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.0.12 (10-12-12)
+-Slider posts fix.
+-Metabox save fix.
+-Quick edit fix.
+-Carousel fixes.
+-PIE fix.
+
+
 Version 2.0.11 (09-19-12)
 -Removed old help link.
 -Added default for background.
