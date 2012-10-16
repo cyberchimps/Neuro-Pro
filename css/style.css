@@ -79,6 +79,10 @@ body {background: #fff;}
 
 .featured-image {float: inherit\0/ !important;}
 
+.clear {
+  clear: both; 
+}
+
 /* Fonts  */
 
 .meta {color: #989898;font-size: 11px;font-weight: 500;padding-bottom: 10px;}
