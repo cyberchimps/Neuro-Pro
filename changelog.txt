@@ -2,6 +2,11 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.0.13 (10-16-12)
+-Allow \ in custom css.
+-Comments - password page.
+-Reverted Slider.
+
 Version 2.0.12 (10-12-12)
 -Slider posts fix.
 -Metabox save fix.
