@@ -2,6 +2,11 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.0.14 (11-07-12)
+-Header social icon fix.
+-Fixed Google font issue.
+-Added password protection for elements.
+
 Version 2.0.13 (10-16-12)
 -Allow \ in custom css.
 -Comments - password page.
