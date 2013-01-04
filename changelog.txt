@@ -2,6 +2,10 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.1.0.0 (01-04-13)
+-Fixed width of right sidebar
+-Enabled SSL for Google fonts if available
+
 Version 2.0.16 (11-29-12)
 -New Updater.
 
