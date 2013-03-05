@@ -20,9 +20,9 @@
 */
 add_action ( 'response_footer', 'response_footer_widgets' );
 
+add_action ( 'response_secondary_footer', 'response_secondary_footer_menu' );
 add_action ( 'response_secondary_footer', 'response_secondary_footer_credit' );
 add_action ( 'response_secondary_footer', 'response_secondary_footer_copyright' );
-
 
 /**
 * Set the footer widgetized area.
@@ -98,6 +98,19 @@ function response_secondary_footer_credit() {
 		</div> 
 	
 	<?php }
+}
+
+/**
+* Adds the afterfooter menu.
+*
+* @since 1.0
+*/
+function response_secondary_footer_menu() {
+	echo "<div id='afterfootermenu' class='six columns'>";
+	wp_nav_menu( array(
+		'theme_location' => 'footer-menu', 
+	)); 
+	echo "</div>";
 }
 /**
 * End

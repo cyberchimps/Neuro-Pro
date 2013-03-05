@@ -667,6 +667,25 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #afterfootercopyright {text-align: right; float: right;}
 
+/* After footer menu*/
+
+#afterfootermenu a {
+	color: ##575D5B;
+}
+
+#afterfootermenu ul {
+	margin: 0; 
+	padding: 0; 
+	list-style-type: none; 
+	list-style-image: none; 
+}
+
+#afterfootermenu li {
+	display: inline; 
+	margin-right: 5px;
+}
+
+
 #credit {text-align: center;margin-bottom: 3px;padding-top:10px}
 
 /* WordPress Styles  */
