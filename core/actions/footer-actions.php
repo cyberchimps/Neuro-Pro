@@ -108,7 +108,8 @@ function response_secondary_footer_credit() {
 function response_secondary_footer_menu() {
 	echo "<div id='afterfootermenu' class='six columns'>";
 	wp_nav_menu( array(
-		'theme_location' => 'footer-menu', 
+		'theme_location'	=> 'footer-menu',
+		'depth'				=> 1	
 	)); 
 	echo "</div>";
 }
