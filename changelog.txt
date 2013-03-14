@@ -2,6 +2,12 @@ Neuro Pro Changelog
 
 ****************************
 
+Version 2.1.0.4 (3-14-13)
+-Set fallback menu for after footer to false
+-Added after footer menu
+-Re-positioned wp_footer()
+-Added placeholder for widget class
+
 Version 2.1.0.3 (2-11-13)
 -Added media uploader for blog and page options
 -Fix drag and drop issue
