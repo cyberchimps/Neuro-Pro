@@ -82,7 +82,6 @@
 		<?php response_after_content_sidebar(); ?>
 		<!--End @response after content sidebar hook-->
 	
-				</div><!--end content-->
 			</div><!--end row-->
 		</div><!--end wrap-->
 	</div><!--end row-->
